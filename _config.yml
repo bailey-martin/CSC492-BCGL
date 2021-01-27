@@ -55,6 +55,9 @@ baseurl: "/CSC492-BCGL"
 
 permalink: /:title/
 
+
+excerpt_separator: <1--more-->
+
 # The release of Jekyll Now that you're using
 version: v1.2.0
 
