@@ -9,7 +9,7 @@ name: Raid inc.
 description: A CSC 492 team from the University of Mount Union
 
 # URL of your avatar or profile pic (you could use your GitHub profile pic)
-avatar: https://raw.githubusercontent.com/bailey-martin/csc492-bcgl/master/images/mountunion.png
+avatar: https://raw.githubusercontent.com/bailey-martin/csc492-bcgl/blog/images/mountunion.png
 
 #
 # Flags below are optional
@@ -21,7 +21,7 @@ footer-links:
   email:
   facebook:
   flickr:
-  github: bailey-martin/csc492-bcgl
+  github: bailey-martin/CSC492-BCGL
   instagram:
   linkedin:
   pinterest:
@@ -47,7 +47,7 @@ url: https://bailey-martin.github.io
 # (http://yourusername.github.io/repository-name)
 # and NOT your User repository (http://yourusername.github.io)
 # then add in the baseurl here, like this: "/repository-name"
-baseurl: "/csc492-bcgl"
+baseurl: "/CSC492-BCGL"
 
 #
 # !! You don't need to change any of the configuration flags below !!
