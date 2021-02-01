@@ -15,7 +15,7 @@ Hello I'm currently a student at the University of Mount union majoring in Multi
 Hello I'm currently a student at the University of Mount union majoring in Multiplatform Software Development and minoring in Entrpenuership. I am in my senior year at the time of writing this.
 
 ### Josh Davidson
-#### Role:
+#### Role: Configuration Management Specialist
 Hello I'm currently a student at the University of Mount union majoring in Multiplatform Software Development and minoring in Entrpenuership. I am in my senior year at the time of writing this.
 
 ### Kyle Hieb
