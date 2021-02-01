@@ -26,6 +26,6 @@ Hello I'm currently a student at the University of Mount union majoring in Compu
 
 [mooreaj2021@mountunion.edu](mailto:mooreaj2021@mountunion.edu) <br>
 [martinbr2021@mountunion.edu](mailto:martinbr2021@mountunion.edu) <br>
-<Josh>
+[davidsjo2021@mountunion.edu](mailto:davidsjo2021@mountunion.edu) <br>
 [hiebkj2021@mountunion.edu](mailto:hiebkj2021@mountunion.edu) <br>
 
