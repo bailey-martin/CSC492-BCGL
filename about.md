@@ -16,7 +16,7 @@ Hello I'm currently a student at the University of Mount union majoring in Multi
 Hello I'm currently a student at the University of Mount union majoring in Multiplatform Software Development and minoring in Entrepreneurship and Japanese. I am in my senior year at the time of writing this.
 
 ### Kyle Hieb
-Hello I'm currently a student at the University of Mount union majoring in Computer Science and minoring in Entrepenuership. I am in my senior year at the time of writing this.
+Hello I'm currently a student at the University of Mount union majoring in Computer Science and minoring in Entrepeneurship. I am in my senior year at the time of writing this.
 
 ### Contact us
 
