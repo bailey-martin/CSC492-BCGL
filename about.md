@@ -10,27 +10,27 @@ The team RAID Inc. consists of the following members below:
 #### Role:
 Hello I'm currently a student at the University of Mount union majoring in Multiplatform Software Development and minoring in Entrpenuership. I am in my senior year at the time of writing this.
 
-#
+# 
 
 ### Bailey Martin
 #### Role: Team Leader
 Hi! I am a student at the University of Mount Union studying Computer Science and Business Administration. I am responsible for keeping the RAID Inc. organized. I work to ensure we follow our schedule, to ensure that we deliver a quality product.
 
-#
+# 
 
 ### Josh Davidson
 #### Role: Configuration Management Specialist
 Hello I'm currently a student at the University of Mount union majoring in Multiplatform Software Development and minoring in Entrpenuership. I am in my senior year at the time of writing this.
 
-#
+# 
 
 ### Kyle Hieb
 #### Role:
 Hello I'm currently a student at the University of Mount union majoring in Computer Science and minoring in Entrepenuership. I am in my senior year at the time of writing this.
 
-#
+# 
 
-### Contact us
+### Contact Us:
 
 [mooreaj2021@mountunion.edu](mailto:mooreaj2021@mountunion.edu) <br>
 [martinbr2021@mountunion.edu](mailto:martinbr2021@mountunion.edu) <br>
