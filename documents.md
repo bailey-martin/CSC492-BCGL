@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Documents
-permalink: /document/
+permalink: /documents/
 ---
 
 The team RAID Inc. cosists of the following members below:
