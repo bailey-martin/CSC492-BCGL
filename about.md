@@ -4,7 +4,7 @@ title: About
 permalink: /about/
 ---
 
-The team RAID Inc. cosists of the following members below:
+The team RAID Inc. consists of the following members below:
 
 ### Andrew Moore
 #### Role:
