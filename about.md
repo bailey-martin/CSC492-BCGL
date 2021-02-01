@@ -1,10 +1,10 @@
 ---
 layout: page
-title: About
+title: Meet the Team
 permalink: /about/
 ---
 
-The team RAID Inc. consists of the following members below:
+The RAID Inc. Team consists of the following members:
 <br/> <br/>
 
 ### Andrew Moore
