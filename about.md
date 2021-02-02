@@ -13,7 +13,7 @@ Hello I'm currently a student at the University of Mount Union majoring in Multi
 
 ### Bailey Martin
 #### Role: Team Leader
-Hi! I am a student at the University of Mount Union studying Computer Science and Business Administration. I am responsible for keeping the RAID Inc. Team organized. I work to ensure we follow our schedule, to ensure that we deliver a quality product. <br/> <br/>
+Hi! I am a student at the University of Mount Union studying Computer Science and Business Administration. I am responsible for keeping the RAID Inc. team organized. I work to ensure we follow our schedule, to guarantee that we deliver a quality product. <br/> <br/>
 
 ### Josh Davidson
 #### Role: Configuration Management Specialist
