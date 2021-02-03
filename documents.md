@@ -4,6 +4,6 @@ title: Documents
 permalink: /documents/
 ---
 
-[SRS Document](Documents/SRS.pdf)
+[SRS Document](Documents/BCGLSoftwareRequirementsSpecification.pdf)
 
 [Press Release](images/PressRelease.JPG)
