@@ -28,5 +28,5 @@ Hello I'm currently a student at the University of Mount Union majoring in Compu
 [mooreaj2021@mountunion.edu](mailto:mooreaj2021@mountunion.edu) <br>
 [martinbr2021@mountunion.edu](mailto:martinbr2021@mountunion.edu) <br>
 [davidsjo2021@mountunion.edu](mailto:davidsjo2021@mountunion.edu) <br>
-[hiebkj2021@mountunion.edu](mailto:hiebkj2021@mountunion.edu) <br>
-
+[hiebkj2021@mountunion.edu](mailto:hiebkj2021@mountunion.edu) <br> <br>
+[Team Email: RAIDIncSoftware@gmail.com](mailto:raidincsoftware@gmail.com) <br>
