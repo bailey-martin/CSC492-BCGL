@@ -6,4 +6,4 @@ permalink: /documents/
 
 [SRS Document](Documents/SRS.pdf)
 
-[Press Release](images/pressRelease.jpg)
+[Press Release](images/PressRelease.jpg)
