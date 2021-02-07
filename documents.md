@@ -6,4 +6,4 @@ permalink: /documents/
 
 [SRS Document](Documents/BCGLSoftwareRequirementsSpecification.pdf)
 
-[Press Release](images/PressRelease.JPG)
+[Press Release](Documents/pressRelease.pdf)
