@@ -3,12 +3,16 @@ layout: post
 title: Week 4 Recap (2-1-21 to 2-7-21)
 ---
 
-January was a busy month for RAID Inc.! We have an idea for a software product that we want to make public within the next 5 months.  
+This week was a busy one for RAID Inc.! 
 
-Our software idea is called BCGL, which stands for Barcode Grocery List. This mobile app will scan the barcodes of products and add them to a user's shopping list. Say, for example, a user runs out of milk. This application will allow them to scan the barcode, which will then add milk to their grocery list. The grocery list appears in the mobile app. Users can then take this list with them to the store, and remove items from the shopping list as they pick them up.  
+On Monday, we met to continue and finalize the development of our project blog and website. We designed and hosted the site on GitHub Pages. The site has a simple user interface containing separate pages for blog posts, posted documents, and team member information. We plan to update the blog at a minimum of once per week, and will be posting recaps of our accomplishments over the past 7 days as well as our goals for the upcoming week. On Monday, we published our first official blog post and shared the URL with Professor Cindric.
 
-This month, we have created a list of requirements for BCGL. We have also incorporated those requirements into a complete Software Requirements Specification document, which can be viewed on the [Documents](https://bailey-martin.github.io/CSC492-BCGL/documents/) page.
+We had our regularly-scheduled team meeting on Tuesday night. The focus of this meeting was to discuss upcoming due dates. We began discussing the Initial Press Release Rough Draft as well as the Preliminary Project Schedule Rough Draft.
 
-Check back soon, as we will be posting weekly updates to document the progress on our software development project!  
+RAID Inc. met again on Wednesday. At this meeting, we were able to review our SRS Document Rough Draft, and verified that we made all of the changes as recommended by Professor Cindirc. We proofread our final draft, reviewed the assignment instructions, and submitted it. A copy of our final SRS Document is also available on the [Documents](https://bailey-martin.github.io/CSC492-BCGL/documents/) page.
+
+Also at our meeting, we designed a rough draft of our team's initial press release. This will be posted in the Computer Science department and will advertise our upcoming software release. The final version of our initial press release will be displayed on this website under the [Documents](https://bailey-martin.github.io/CSC492-BCGL/documents/) section. Lastly, we focused on beginning a rough draft of the Preliminary Project Schedule. We were able to create an outline of information to include, including "milestones" and important due dates. The team also began creating a Gantt Chart and worked to generate a list of specific tasks that would need to be completed as a part of the development process. We composed this list of tasks from our project's functional requirements list. This is still a work in progress. We were able to set up a Kanban board in our GitHub repository and began adding the tasks that we identified while developing our Gantt Chart.
+
+We hope to have another productive week, as we are planning to continue work on our Preliminary Project Schedule and to finalize our Initial Press Release!  
   
 -RAID Inc.
