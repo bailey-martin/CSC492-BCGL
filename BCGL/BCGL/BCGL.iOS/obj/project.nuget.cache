@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "+H4IFbODzLnQfAIqMenqzFjWFLiADnCRmQMq1h6jSutIAqvi2xDZXLVY1rujG+m9fR3fXVCxs+0gidKktUxX4g==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\josho\\Documents\\GitHub\\CSC492-BCGL\\BCGL\\BCGL\\BCGL.iOS\\BCGL.iOS.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\josho\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
+    "C:\\Users\\josho\\.nuget\\packages\\xamarin.essentials\\1.3.1\\xamarin.essentials.1.3.1.nupkg.sha512",
+    "C:\\Users\\josho\\.nuget\\packages\\xamarin.forms\\4.5.0.495\\xamarin.forms.4.5.0.495.nupkg.sha512"
+  ],
+  "logs": []
+}

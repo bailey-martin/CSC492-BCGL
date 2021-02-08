@@ -1,0 +1,14 @@
+C:\Users\josho\Documents\GitHub\CSC492-BCGL\BCGL\BCGL\BCGL\bin\Debug\netstandard2.0\BCGL.deps.json
+C:\Users\josho\Documents\GitHub\CSC492-BCGL\BCGL\BCGL\BCGL\bin\Debug\netstandard2.0\BCGL.dll
+C:\Users\josho\Documents\GitHub\CSC492-BCGL\BCGL\BCGL\BCGL\bin\Debug\netstandard2.0\ref\BCGL.dll
+C:\Users\josho\Documents\GitHub\CSC492-BCGL\BCGL\BCGL\BCGL\bin\Debug\netstandard2.0\BCGL.pdb
+C:\Users\josho\Documents\GitHub\CSC492-BCGL\BCGL\BCGL\BCGL\obj\Debug\netstandard2.0\BCGL.csprojAssemblyReference.cache
+C:\Users\josho\Documents\GitHub\CSC492-BCGL\BCGL\BCGL\BCGL\obj\Debug\netstandard2.0\App.xaml.g.cs
+C:\Users\josho\Documents\GitHub\CSC492-BCGL\BCGL\BCGL\BCGL\obj\Debug\netstandard2.0\MainPage.xaml.g.cs
+C:\Users\josho\Documents\GitHub\CSC492-BCGL\BCGL\BCGL\BCGL\obj\Debug\netstandard2.0\BCGL.AssemblyInfoInputs.cache
+C:\Users\josho\Documents\GitHub\CSC492-BCGL\BCGL\BCGL\BCGL\obj\Debug\netstandard2.0\BCGL.AssemblyInfo.cs
+C:\Users\josho\Documents\GitHub\CSC492-BCGL\BCGL\BCGL\BCGL\obj\Debug\netstandard2.0\BCGL.csproj.CoreCompileInputs.cache
+C:\Users\josho\Documents\GitHub\CSC492-BCGL\BCGL\BCGL\BCGL\obj\Debug\netstandard2.0\XamlC.stamp
+C:\Users\josho\Documents\GitHub\CSC492-BCGL\BCGL\BCGL\BCGL\obj\Debug\netstandard2.0\BCGL.dll
+C:\Users\josho\Documents\GitHub\CSC492-BCGL\BCGL\BCGL\BCGL\obj\Debug\netstandard2.0\ref\BCGL.dll
+C:\Users\josho\Documents\GitHub\CSC492-BCGL\BCGL\BCGL\BCGL\obj\Debug\netstandard2.0\BCGL.pdb
