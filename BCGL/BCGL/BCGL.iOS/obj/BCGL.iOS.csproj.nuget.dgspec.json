@@ -1,24 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\josho\\Documents\\GitHub\\CSC492-BCGL\\BCGL\\BCGL\\BCGL.iOS\\BCGL.iOS.csproj": {}
+    "C:\\Users\\Bailey Martin\\Documents\\CSC 492\\CSC492-BCGL\\BCGL\\BCGL\\BCGL.iOS\\BCGL.iOS.csproj": {}
   },
   "projects": {
-    "C:\\Users\\josho\\Documents\\GitHub\\CSC492-BCGL\\BCGL\\BCGL\\BCGL.iOS\\BCGL.iOS.csproj": {
+    "C:\\Users\\Bailey Martin\\Documents\\CSC 492\\CSC492-BCGL\\BCGL\\BCGL\\BCGL.iOS\\BCGL.iOS.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\josho\\Documents\\GitHub\\CSC492-BCGL\\BCGL\\BCGL\\BCGL.iOS\\BCGL.iOS.csproj",
+        "projectUniqueName": "C:\\Users\\Bailey Martin\\Documents\\CSC 492\\CSC492-BCGL\\BCGL\\BCGL\\BCGL.iOS\\BCGL.iOS.csproj",
         "projectName": "BCGL.iOS",
-        "projectPath": "C:\\Users\\josho\\Documents\\GitHub\\CSC492-BCGL\\BCGL\\BCGL\\BCGL.iOS\\BCGL.iOS.csproj",
-        "packagesPath": "C:\\Users\\josho\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\josho\\Documents\\GitHub\\CSC492-BCGL\\BCGL\\BCGL\\BCGL.iOS\\obj\\",
+        "projectPath": "C:\\Users\\Bailey Martin\\Documents\\CSC 492\\CSC492-BCGL\\BCGL\\BCGL\\BCGL.iOS\\BCGL.iOS.csproj",
+        "packagesPath": "C:\\Users\\Bailey Martin\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Bailey Martin\\Documents\\CSC 492\\CSC492-BCGL\\BCGL\\BCGL\\BCGL.iOS\\obj\\",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\"
         ],
         "configFilePaths": [
-          "C:\\Users\\josho\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Bailey Martin\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
@@ -32,8 +32,8 @@
         "frameworks": {
           "xamarinios10": {
             "projectReferences": {
-              "C:\\Users\\josho\\Documents\\GitHub\\CSC492-BCGL\\BCGL\\BCGL\\BCGL\\BCGL.csproj": {
-                "projectPath": "C:\\Users\\josho\\Documents\\GitHub\\CSC492-BCGL\\BCGL\\BCGL\\BCGL\\BCGL.csproj"
+              "C:\\Users\\Bailey Martin\\Documents\\CSC 492\\CSC492-BCGL\\BCGL\\BCGL\\BCGL\\BCGL.csproj": {
+                "projectPath": "C:\\Users\\Bailey Martin\\Documents\\CSC 492\\CSC492-BCGL\\BCGL\\BCGL\\BCGL\\BCGL.csproj"
               }
             }
           }
@@ -65,20 +65,20 @@
         }
       }
     },
-    "C:\\Users\\josho\\Documents\\GitHub\\CSC492-BCGL\\BCGL\\BCGL\\BCGL\\BCGL.csproj": {
+    "C:\\Users\\Bailey Martin\\Documents\\CSC 492\\CSC492-BCGL\\BCGL\\BCGL\\BCGL\\BCGL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\josho\\Documents\\GitHub\\CSC492-BCGL\\BCGL\\BCGL\\BCGL\\BCGL.csproj",
+        "projectUniqueName": "C:\\Users\\Bailey Martin\\Documents\\CSC 492\\CSC492-BCGL\\BCGL\\BCGL\\BCGL\\BCGL.csproj",
         "projectName": "BCGL",
-        "projectPath": "C:\\Users\\josho\\Documents\\GitHub\\CSC492-BCGL\\BCGL\\BCGL\\BCGL\\BCGL.csproj",
-        "packagesPath": "C:\\Users\\josho\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\josho\\Documents\\GitHub\\CSC492-BCGL\\BCGL\\BCGL\\BCGL\\obj\\",
+        "projectPath": "C:\\Users\\Bailey Martin\\Documents\\CSC 492\\CSC492-BCGL\\BCGL\\BCGL\\BCGL\\BCGL.csproj",
+        "packagesPath": "C:\\Users\\Bailey Martin\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Bailey Martin\\Documents\\CSC 492\\CSC492-BCGL\\BCGL\\BCGL\\BCGL\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\"
         ],
         "configFilePaths": [
-          "C:\\Users\\josho\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Bailey Martin\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
