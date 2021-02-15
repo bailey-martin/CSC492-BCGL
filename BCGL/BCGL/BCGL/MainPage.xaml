@@ -11,6 +11,14 @@
         <Label Text="Welcome to Xamarin.Forms!" 
            HorizontalOptions="Center"
            VerticalOptions="CenterAndExpand" />
+        <TableView Intent="Settings">
+            <TableRoot>
+                <TableSection Title="Ring">
+                    <SwitchCell Text="New Voice Mail" />
+                    <SwitchCell Text="New Mail" On="true" />
+                </TableSection>
+            </TableRoot>
+        </TableView>
     </StackLayout>
 
 </ContentPage>
