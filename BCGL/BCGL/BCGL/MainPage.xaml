@@ -8,7 +8,14 @@
 
     <StackLayout>
         <!-- Place new controls here -->
-        <Label Text="Welcome to Xamarin.Forms!" 
+        <SearchBar Placeholder="Search items..."
+           CancelButtonColor="Orange"
+           PlaceholderColor="Orange"
+           TextColor="Orange"
+           HorizontalTextAlignment="Center"
+           FontSize="Medium"
+           FontAttributes="Italic" />
+        <Label Text="Welcome to" 
            HorizontalOptions="Center"
            VerticalOptions="CenterAndExpand" />
         <TableView Intent="Settings">
