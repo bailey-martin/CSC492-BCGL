@@ -1,25 +1,31 @@
 {
   "format": 1,
   "restore": {
-    "/Users/andrewmoore/Documents/Github/CSC492-BCGL/BCGL/BCGL/BCGL/BCGL.csproj": {}
+    "C:\\Users\\Bailey Martin\\Documents\\CSC 492\\CSC492-BCGL\\BCGL\\BCGL\\BCGL\\BCGL.csproj": {}
   },
   "projects": {
-    "/Users/andrewmoore/Documents/Github/CSC492-BCGL/BCGL/BCGL/BCGL/BCGL.csproj": {
+    "C:\\Users\\Bailey Martin\\Documents\\CSC 492\\CSC492-BCGL\\BCGL\\BCGL\\BCGL\\BCGL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/andrewmoore/Documents/Github/CSC492-BCGL/BCGL/BCGL/BCGL/BCGL.csproj",
+        "projectUniqueName": "C:\\Users\\Bailey Martin\\Documents\\CSC 492\\CSC492-BCGL\\BCGL\\BCGL\\BCGL\\BCGL.csproj",
         "projectName": "BCGL",
-        "projectPath": "/Users/andrewmoore/Documents/Github/CSC492-BCGL/BCGL/BCGL/BCGL/BCGL.csproj",
-        "packagesPath": "/Users/andrewmoore/.nuget/packages/",
-        "outputPath": "/Users/andrewmoore/Documents/Github/CSC492-BCGL/BCGL/BCGL/BCGL/obj/",
+        "projectPath": "C:\\Users\\Bailey Martin\\Documents\\CSC 492\\CSC492-BCGL\\BCGL\\BCGL\\BCGL\\BCGL.csproj",
+        "packagesPath": "C:\\Users\\Bailey Martin\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Bailey Martin\\Documents\\CSC 492\\CSC492-BCGL\\BCGL\\BCGL\\BCGL\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Microsoft\\Xamarin\\NuGet\\"
+        ],
         "configFilePaths": [
-          "/Users/andrewmoore/.config/NuGet/NuGet.Config"
+          "C:\\Users\\Bailey Martin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netstandard2.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -63,7 +69,7 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/5.0.103/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.102\\RuntimeIdentifierGraph.json"
         }
       }
     }

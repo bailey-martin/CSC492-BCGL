@@ -1969,32 +1969,39 @@
     ]
   },
   "packageFolders": {
-    "/Users/andrewmoore/.nuget/packages/": {}
+    "C:\\Users\\Bailey Martin\\.nuget\\packages\\": {},
+    "C:\\Microsoft\\Xamarin\\NuGet\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/andrewmoore/Documents/Github/CSC492-BCGL/BCGL/BCGL/BCGL.Android/BCGL.Android.csproj",
+      "projectUniqueName": "C:\\Users\\Bailey Martin\\Documents\\CSC 492\\CSC492-BCGL\\BCGL\\BCGL\\BCGL.Android\\BCGL.Android.csproj",
       "projectName": "BCGL.Android",
-      "projectPath": "/Users/andrewmoore/Documents/Github/CSC492-BCGL/BCGL/BCGL/BCGL.Android/BCGL.Android.csproj",
-      "packagesPath": "/Users/andrewmoore/.nuget/packages/",
-      "outputPath": "/Users/andrewmoore/Documents/Github/CSC492-BCGL/BCGL/BCGL/BCGL.Android/obj/",
+      "projectPath": "C:\\Users\\Bailey Martin\\Documents\\CSC 492\\CSC492-BCGL\\BCGL\\BCGL\\BCGL.Android\\BCGL.Android.csproj",
+      "packagesPath": "C:\\Users\\Bailey Martin\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Bailey Martin\\Documents\\CSC 492\\CSC492-BCGL\\BCGL\\BCGL\\BCGL.Android\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
+      "fallbackFolders": [
+        "C:\\Microsoft\\Xamarin\\NuGet\\"
+      ],
       "configFilePaths": [
-        "/Users/andrewmoore/.config/NuGet/NuGet.Config"
+        "C:\\Users\\Bailey Martin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
       "originalTargetFrameworks": [
         "monoandroid90"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "monoandroid90": {
           "projectReferences": {
-            "/Users/andrewmoore/Documents/Github/CSC492-BCGL/BCGL/BCGL/BCGL/BCGL.csproj": {
-              "projectPath": "/Users/andrewmoore/Documents/Github/CSC492-BCGL/BCGL/BCGL/BCGL/BCGL.csproj"
+            "C:\\Users\\Bailey Martin\\Documents\\CSC 492\\CSC492-BCGL\\BCGL\\BCGL\\BCGL\\BCGL.csproj": {
+              "projectPath": "C:\\Users\\Bailey Martin\\Documents\\CSC 492\\CSC492-BCGL\\BCGL\\BCGL\\BCGL\\BCGL.csproj"
             }
           }
         }
