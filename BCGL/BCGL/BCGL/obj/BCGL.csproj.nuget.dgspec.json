@@ -14,7 +14,8 @@
         "outputPath": "C:\\Users\\josho\\Documents\\GitHub\\CSC492-BCGL\\BCGL\\BCGL\\BCGL\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Microsoft\\Xamarin\\NuGet\\"
+          "C:\\Microsoft\\Xamarin\\NuGet\\",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
           "C:\\Users\\josho\\AppData\\Roaming\\NuGet\\NuGet.Config",

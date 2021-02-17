@@ -24,3 +24,4 @@ C:\Users\josho\Documents\GitHub\CSC492-BCGL\BCGL\BCGL\BCGL\obj\Debug\netstandard
 C:\Users\josho\Documents\GitHub\CSC492-BCGL\BCGL\BCGL\BCGL\obj\Debug\netstandard2.0\BCGL.dll
 C:\Users\josho\Documents\GitHub\CSC492-BCGL\BCGL\BCGL\BCGL\obj\Debug\netstandard2.0\ref\BCGL.dll
 C:\Users\josho\Documents\GitHub\CSC492-BCGL\BCGL\BCGL\BCGL\obj\Debug\netstandard2.0\BCGL.pdb
+C:\Users\josho\Documents\GitHub\CSC492-BCGL\BCGL\BCGL\BCGL\obj\Debug\netstandard2.0\BCGL.csprojAssemblyReference.cache
