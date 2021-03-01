@@ -11,6 +11,6 @@ On Tuesday, we held our regularly-scheduled meeting via Microsoft Teams. During 
 
 On Wednesday afternoon, we held another meeting to continue to work on Design Document 1. We decided it would be best to work as a group on designing the DFD portion of the document. We designed it first on a whiteboard, and then worked to digitally build it into our Design Document 1. This was a large undertaking, as there was a large amount of discussion between team members throughout this task.  
 
-For the rest of the week, RAID Inc. worked to continue to add to and revise Design Document 1 in preparation for Monday's rough draft submission.  
+For the rest of the week, RAID Inc. worked to continue to add to and revise Design Document 1 in preparation for Monday's rough draft submission. Check back next week for another update!  
 
 -RAID Inc.
