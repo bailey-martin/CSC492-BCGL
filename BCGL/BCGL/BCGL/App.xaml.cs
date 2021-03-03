@@ -1,4 +1,6 @@
-﻿using System;
+﻿using BCGL.Services;
+using BCGL.Views;
+using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -6,15 +8,18 @@ namespace BCGL
 {
     public partial class App : Application
     {
+
         public App()
         {
             InitializeComponent();
 
-            MainPage = new MainPage();
+            DependencyService.Register<MockDataStore>();
+            MainPage = new AppShell();
         }
 
-        protected override void OnStart()
+        protected override async void OnStart()
         {
+            await Shell.Current.GoToAsync("//LoginPage");
         }
 
         protected override void OnSleep()
