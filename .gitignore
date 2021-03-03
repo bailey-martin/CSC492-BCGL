@@ -363,3 +363,5 @@ MigrationBackup/
 FodyWeavers.xsd
 BCGL/BCGL/BCGL.Android/Resources/Resource.designer.cs
 BCGL/BCGL/BCGL.Android/BCGL.Android.csproj
+BCGL/BCGL/BCGL.Android/obj/Debug/90/DesignTimeResolveAssemblyReferencesInput.cache
+BCGL/BCGL/BCGL.iOS/obj/iPhone/Debug/DesignTimeResolveAssemblyReferencesInput.cache
