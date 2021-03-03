@@ -23,5 +23,10 @@ namespace BCGL
         {
             return _database.InsertAsync(person);
         }
+
+        public Task<int> DeletePersonAsync(Person person)
+        {
+            return _database.DeleteAsync(person);
+        }
     }
 }
