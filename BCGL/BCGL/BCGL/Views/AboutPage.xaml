@@ -3,6 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="BCGL.Views.AboutPage"
              xmlns:vm="clr-namespace:BCGL.ViewModels"
+             xmlns:local="clr-namespace:BCGL"
              Title="{Binding Title}">
     
     <ContentPage.BindingContext>
@@ -23,7 +24,7 @@
         <StackLayout BackgroundColor="{StaticResource Accent}" VerticalOptions="FillAndExpand" HorizontalOptions="Fill">
             <StackLayout Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="Center">
                 <ContentView Padding="0,40,0,40" VerticalOptions="FillAndExpand">
-                    <Image Source="xamarin_logo.png" VerticalOptions="Center" HeightRequest="64" />
+                    <Image Source="{local:ImageResource BCGL.Images.raidinclogo.png}" VerticalOptions="Center" HeightRequest="64" />
                 </ContentView>
             </StackLayout>
         </StackLayout>
@@ -33,17 +34,18 @@
                 <Label Text="Make changes to your XAML file and save to see your UI update in the running app with XAML Hot Reload. Give it a try!" FontSize="16" Padding="0,0,0,0"/>
                 <Label Text="Here is a test of editing the about page" FontSize="26" Padding="50,50,0,0"/>
                 <Label Text="Item 2" FontSize="16" Padding="50,50,50,50"/>
+                <Image Source="raidinclogo"/>
                 <Label FontSize="16" Padding="0,24,0,0">
                     <Label.FormattedText>
                         <FormattedString>
                             <FormattedString.Spans>
                                 <Span Text="Learn more at "/>
-                                <Span Text="https://aka.ms/xamarin-quickstart" FontAttributes="Bold"/>
+                                <Span Text="https://bailey-martin.github.io/CSC492-BCGL/" FontAttributes="Bold"/>
                             </FormattedString.Spans>
                         </FormattedString>
                     </Label.FormattedText>
                 </Label>
-                <Button Margin="0,10,0,0" Text="Learn more"
+                <Button Margin="0,10,0,0" Text="BCGL/RAID Inc. Webpage"
                         Command="{Binding OpenWebCommand}"
                         BackgroundColor="{StaticResource Primary}"
                         TextColor="White" />

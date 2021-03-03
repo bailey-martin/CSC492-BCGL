@@ -10,7 +10,7 @@ namespace BCGL.ViewModels
         public AboutViewModel()
         {
             Title = "About";
-            OpenWebCommand = new Command(async () => await Browser.OpenAsync("https://aka.ms/xamarin-quickstart"));
+            OpenWebCommand = new Command(async () => await Browser.OpenAsync("https://bailey-martin.github.io/CSC492-BCGL/"));
         }
 
         public ICommand OpenWebCommand { get; }
