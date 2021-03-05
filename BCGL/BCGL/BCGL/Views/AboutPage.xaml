@@ -31,9 +31,9 @@
         <ScrollView Grid.Row="1">
             <StackLayout Orientation="Vertical" Padding="30,24,30,24" Spacing="10">
                 <Label Text="BCGL: Barcode Grocery List" FontSize="Title"/>
-                <Label Text="Make changes to your XAML file and save to see your UI update in the running app with XAML Hot Reload. Give it a try!" FontSize="16" Padding="0,0,0,0"/>
-                <Label Text="Here is a test of editing the about page" FontSize="26" Padding="50,50,0,0"/>
-                <Label Text="Item 2" FontSize="16" Padding="50,50,50,50"/>
+                <Label Text="Barcode Grocery List, better known as BCGL, is a mobile application designed to enhance the everyday shopping experience. BCGL allows consumers to create shopping lists on their smartphone by scanning the barcode of items they intend to buy. For example, when you run out of milk, you can scan the UPC or SKU barcode on your gallon of milk, and it will be added to your grocery list. Users can also manually search for products via their name or SKU number. Additionally, users can have multiple shopping lists within this app. This app was designed to make the shopping experience easier, and was designed for consumers of all ages. Please note that the BCGL software is under continuous development. We hope that you will enjoy this app. If you encounter any issues or have any feedback for us, please initiate a conversation with us using one of the buttons below. We look forward to hearing from you, happy shopping!" FontSize="16" Padding="0,0,0,0"/>
+                <Label Text="Sincerely," FontSize="16" Padding="0,0,0,0"/>
+                <Label FontFamily ="Italic" Text="RAID Inc." FontSize="16" Padding="0,0,0,0"/>
                 <Image Source="raidinclogo"/>
                 <Label FontSize="16" Padding="0,24,0,0">
                     <Label.FormattedText>
