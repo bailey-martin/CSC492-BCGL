@@ -30,7 +30,7 @@
         </StackLayout>
         <ScrollView Grid.Row="1">
             <StackLayout Orientation="Vertical" Padding="30,24,30,24" Spacing="10">
-                <Label Text="Start developing now" FontSize="Title"/>
+                <Label Text="BCGL: Barcode Grocery List" FontSize="Title"/>
                 <Label Text="Make changes to your XAML file and save to see your UI update in the running app with XAML Hot Reload. Give it a try!" FontSize="16" Padding="0,0,0,0"/>
                 <Label Text="Here is a test of editing the about page" FontSize="26" Padding="50,50,0,0"/>
                 <Label Text="Item 2" FontSize="16" Padding="50,50,50,50"/>
@@ -39,8 +39,9 @@
                     <Label.FormattedText>
                         <FormattedString>
                             <FormattedString.Spans>
-                                <Span Text="Learn more at "/>
+                                <Span Text="Learn more about this app at "/>
                                 <Span Text="https://bailey-martin.github.io/CSC492-BCGL/" FontAttributes="Bold"/>
+                                <Span Text=", or by pressing the button below."/>
                             </FormattedString.Spans>
                         </FormattedString>
                     </Label.FormattedText>
