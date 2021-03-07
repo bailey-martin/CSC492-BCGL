@@ -13,4 +13,4 @@ On Wednesday afternoon, we held another meeting to continue to work on the devel
 
 For the remainder of the week, RAID Inc. worked to continue development on specific project tasks. Next week, we will provide another update, and aim to tackle a new set of development tasks!
 
--RAID Inc.
+-RAID Inc. 2
