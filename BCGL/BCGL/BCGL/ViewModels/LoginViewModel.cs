@@ -1,4 +1,5 @@
-﻿using BCGL.Views;
+﻿using BCGL.Services.Account;
+using BCGL.Views;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -13,6 +14,13 @@ namespace BCGL.ViewModels
         public LoginViewModel()
         {
             LoginCommand = new Command(OnLoginClicked);
+        }
+
+        private IAccountService _accountService;
+
+        public LoginViewModel(IAccountService accountService)
+        {
+            _accountService = accountService;
         }
 
         private async void OnLoginClicked(object obj)
