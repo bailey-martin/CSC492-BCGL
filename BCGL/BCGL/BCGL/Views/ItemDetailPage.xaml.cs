@@ -23,11 +23,11 @@ namespace BCGL.Views
         {
             if (!string.IsNullOrWhiteSpace(nameEntry.Text) && !string.IsNullOrWhiteSpace(ageEntry.Text))
             {
-                await App.Database.SavePersonAsync(new Person
+                /**await App.Database.SavePersonAsync(new Person
                 {
                     Name = nameEntry.Text,
                     Age = int.Parse(ageEntry.Text)
-                });
+                });*/
 
                 nameEntry.Text = ageEntry.Text = string.Empty;
                 collectionView.ItemsSource = await App.Database.GetPeopleAsync();

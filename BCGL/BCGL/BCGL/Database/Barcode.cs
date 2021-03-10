@@ -2,11 +2,13 @@
 
 namespace BCGL
 {
-    public class Person
+    public class Barcode
     {
-        [PrimaryKey, AutoIncrement]
+        [Unique]
         public int ID { get; set; }
+        [Unique]
         public string Name { get; set; }
+        [Unique]
         public int Age { get; set; }
     }
 }
