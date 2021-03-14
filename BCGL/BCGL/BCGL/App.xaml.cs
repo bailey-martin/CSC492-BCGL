@@ -1,7 +1,4 @@
-﻿using BCGL.PageModels;
-using BCGL.PageModels.Base;
-using BCGL.Services;
-using BCGL.Services.Navigation;
+﻿using BCGL.Services;
 using BCGL.Views;
 using System;
 using System.Threading.Tasks;
@@ -17,9 +14,9 @@ namespace BCGL
         {
             InitializeComponent();
 
-            DependencyService.Register<MockDataStore>();
-            //MainPage = new AppShell();
-            MainPage = new NavigationPage(new LoginPage());
+            //DependencyService.Register<MockDataStore>();
+            MainPage = new AppShell();
+            //MainPage = new NavigationPage(new LoginPage());
         }
 
         /*

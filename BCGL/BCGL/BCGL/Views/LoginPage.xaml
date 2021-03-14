@@ -10,8 +10,8 @@
     <ContentPage.Content>
         <StackLayout Padding="10,0,10,0" VerticalOptions="Center">
                 <Image Source="{local:ImageResource BCGL.Images.raidinclogo.png}" VerticalOptions="Center" HeightRequest="300" />
-                <Entry VerticalOptions="Center" Placeholder="Username" />
-                <Entry VerticalOptions="Center" Placeholder="Password" IsPassword="True" />
+                <Entry VerticalOptions="Center" Placeholder="Username" x:Name="UsernameInput"/>
+                <Entry VerticalOptions="Center" Placeholder="Password" IsPassword="True" x:Name="PasswordInput" />
 
             <Button VerticalOptions="Center" Text="Login" Clicked="LoginClicked"/>
             </StackLayout>
