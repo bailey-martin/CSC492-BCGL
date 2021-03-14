@@ -18,7 +18,8 @@ namespace BCGL
             InitializeComponent();
 
             DependencyService.Register<MockDataStore>();
-            MainPage = new AppShell();
+            //MainPage = new AppShell();
+            MainPage = new NavigationPage(new LoginPage());
         }
 
         /*
