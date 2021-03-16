@@ -10,15 +10,24 @@ namespace BCGL.ViewModels
     {
         public Command LoginCommand { get; }
 
+        public Command CreateAccountCommand { get; }
+
         public LoginViewModel()
         {
             LoginCommand = new Command(OnLoginClicked);
+            CreateAccountCommand = new Command(OnCreateClicked);
         }
 
         private async void OnLoginClicked(object obj)
         {
             // Prefixing with `//` switches to a different navigation stack instead of pushing to the active one
             await Shell.Current.GoToAsync($"//{nameof(AboutPage)}");
+        }
+
+        private async void OnCreateClicked(object obj)
+        {
+            // Prefixing with `//` switches to a different navigation stack instead of pushing to the active one
+            await Shell.Current.GoToAsync($"{nameof(CreateAccountPage)}");
         }
     }
 }
