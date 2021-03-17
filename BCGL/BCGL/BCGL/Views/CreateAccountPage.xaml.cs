@@ -12,5 +12,19 @@ namespace BCGL.Views
         {
             InitializeComponent();
         }
+
+        async void OnButtonClicked(object sender, EventArgs e)
+        {
+            if (!string.IsNullOrWhiteSpace(usernameEntry.Text) && !string.IsNullOrWhiteSpace(passwordEntry.Text))
+            {
+                await App.Database.SavePersonAsync(new UserData
+                {
+                    username = usernameEntry.Text,
+                    password = passwordEntry.Text
+                });
+
+                usernameEntry.Text = passwordEntry.Text = string.Empty;
+            }
+        }
     }
 }

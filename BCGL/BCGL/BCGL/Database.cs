@@ -26,14 +26,14 @@ namespace BCGL
             return _database.Table<UserList>().ToListAsync();
         }
 
-        public Task<int> SavePersonAsync(UserList userList)
+        public Task<int> SavePersonAsync(UserData userData)
         {
-            return _database.InsertAsync(userList);
+            return _database.InsertAsync(userData);
         }
 
-        public Task<int> DeletePersonAsync(UserList userList)
+        public Task<int> DeletePersonAsync(UserData userData)
         {
-            return _database.DeleteAsync(userList);
+            return _database.DeleteAsync(userData);
         }
     }
 }

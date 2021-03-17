@@ -7,9 +7,9 @@ namespace BCGL
     public class UserData
     {
         [PrimaryKey, Unique, MaxLength(20)]
-        public string userName { get; set; }
+        public string username { get; set; }
         [MaxLength(12)]
-        public int password { get; set; }
+        public string password { get; set; }
 
         [OneToMany(CascadeOperations = CascadeOperation.All)]
         public UserList[] UserLists { get; set; }
