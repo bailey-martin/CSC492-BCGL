@@ -16,7 +16,7 @@ namespace BCGL
              * userListDetailed - listId/listContent
              */
             _database = new SQLiteAsyncConnection(dbPath);
-            _database.CreateTableAsync<UserData>().Wait();
+            _database.CreateTableAsync<Barcode>().Wait();
             _database.CreateTableAsync<UserList>().Wait();
             _database.CreateTableAsync<UserListDetailed>().Wait();
         }
@@ -29,6 +29,11 @@ namespace BCGL
         public Task<int> SavePersonAsync(UserData userData)
         {
             return _database.InsertAsync(userData);
+        }
+
+        public Task<int> SaveInfoAsync(Barcode barcode)
+        {
+            return _database.InsertAsync(barcode);
         }
 
         public Task<int> DeletePersonAsync(UserData userData)
