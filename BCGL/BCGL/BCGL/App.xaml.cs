@@ -17,7 +17,7 @@ namespace BCGL
             {
                 if (database == null)
                 {
-                    database = new Database(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "MyDB.db3"));
+                    database = new Database(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "MyDB_Final.db3"));
                 }
                 return database;
             }
@@ -26,7 +26,13 @@ namespace BCGL
         public App()
         {
             InitializeComponent();
-
+            ///**
+            // * Get DB Path
+            Console.WriteLine("################");
+            Console.WriteLine("################");
+            Console.WriteLine("################");
+            Console.WriteLine(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData)));
+            //*/
             DependencyService.Register<MockDataStore>();
             MainPage = new AppShell();
         }

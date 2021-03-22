@@ -2,6 +2,7 @@
 
 namespace BCGL
 {
+    [Table("Barcode")]
     public class Barcode
     {
         [Unique]
