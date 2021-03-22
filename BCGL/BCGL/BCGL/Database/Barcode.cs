@@ -5,11 +5,9 @@ namespace BCGL
     [Table("Barcode")]
     public class Barcode
     {
-        [Unique]
-        public int ID { get; set; }
-        [Unique]
-        public string Name { get; set; }
-        [Unique]
-        public int Age { get; set; }
+        [Unique, PrimaryKey]
+        public int SKU { get; set; }
+        public string ProductName { get; set; }
+        public decimal Price { get; set; }
     }
 }
