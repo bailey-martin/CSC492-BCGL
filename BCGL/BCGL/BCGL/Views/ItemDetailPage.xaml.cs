@@ -17,7 +17,7 @@ namespace BCGL.Views
         protected override async void OnAppearing()
         {
             base.OnAppearing();
-            collectionView.ItemsSource = await App.Database.GetListDetailedAsync();
+            collectionView.ItemsSource = await App.Database.GetListDetailedAsync(_viewModel.ItemId);
         }
 
         async void OnButtonClicked(object sender, EventArgs e)
@@ -31,7 +31,7 @@ namespace BCGL.Views
                 });
 
                 productEntry.Text = string.Empty;
-                collectionView.ItemsSource = await App.Database.GetListDetailedAsync();
+                collectionView.ItemsSource = await App.Database.GetListDetailedAsync(_viewModel.ItemId);
             }
         }
     }

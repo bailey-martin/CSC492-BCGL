@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 using SQLite;
 
@@ -21,9 +22,14 @@ namespace BCGL
             _database.CreateTableAsync<UserListDetailed>().Wait();
         }
 
-        public Task<List<UserList>> GetListDetailedAsync()
+        public Task<List<UserListDetailed>> GetListDetailedAsync(string listID)
         {
-            return _database.Table<UserList>().ToListAsync();
+            return _database.Table<UserListDetailed>().Where(items => items.listID == listID).ToListAsync();
+        }
+
+        public Task<List<UserList>> GetListAsync(string username)
+        {
+            return _database.Table<UserList>().Where(items => items.username == username).ToListAsync();
         }
 
         public Task<int> SavePersonAsync(UserData userData)

@@ -10,6 +10,8 @@ namespace BCGL
         public string listID { get; set; }
         [ForeignKey(typeof(UserData))]
         public string username { get; set; }
+        public string text { get; set; }
+        public string description { get; set; }
 
         [OneToMany(CascadeOperations = CascadeOperation.All)]
         public UserListDetailed[] UserListDetailed { get; set; }

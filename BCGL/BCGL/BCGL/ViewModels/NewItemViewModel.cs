@@ -64,13 +64,13 @@ namespace BCGL.ViewModels
             };
 
             await DataStore.AddItemAsync(newItem);
-            Console.WriteLine("newItem##################");
-            Console.WriteLine(newItem.Id);
             await App.Database.SaveListAsync(new UserList
             {
                 listID = newItem.Id,
-                username = "testman123"
-            }); ;
+                username = "testman123",
+                text = Text,
+                description = description
+            });
 
             // This will pop the current page off the navigation stack
             await Shell.Current.GoToAsync("..");
