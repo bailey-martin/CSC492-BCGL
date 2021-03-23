@@ -11,6 +11,7 @@ namespace BCGL.ViewModels
     {
         private string text;
         private string description;
+        private string id;
 
         public NewItemViewModel()
         {
@@ -30,6 +31,12 @@ namespace BCGL.ViewModels
         {
             get => text;
             set => SetProperty(ref text, value);
+        }
+
+        public string Id
+        {
+            get => id;
+            set => SetProperty(ref id, value);
         }
 
         public string Description
@@ -57,6 +64,12 @@ namespace BCGL.ViewModels
             };
 
             await DataStore.AddItemAsync(newItem);
+
+            await App.Database.SaveListAsync(new UserList
+            {
+                listID = int.Parse(newItem.Id),
+                username = "testman123"
+            }); ;
 
             // This will pop the current page off the navigation stack
             await Shell.Current.GoToAsync("..");

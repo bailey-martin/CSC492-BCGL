@@ -12,10 +12,18 @@ namespace BCGL.ViewModels
 
         public Command CreateAccountCommand { get; }
 
+        private string username;
+
         public LoginViewModel()
         {
             LoginCommand = new Command(OnLoginClicked);
             CreateAccountCommand = new Command(OnCreateClicked);
+        }
+
+        public string Username
+        {
+            get => username;
+            set => SetProperty(ref username, value);
         }
 
         private async void OnLoginClicked(object obj)

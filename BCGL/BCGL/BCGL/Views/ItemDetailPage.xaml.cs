@@ -16,15 +16,21 @@ namespace BCGL.Views
         protected override async void OnAppearing()
         {
             base.OnAppearing();
-            collectionView.ItemsSource = await App.Database.GetPeopleAsync();
+            collectionView.ItemsSource = await App.Database.GetListDetailedAsync();
         }
 
         async void OnButtonClicked(object sender, EventArgs e)
         {
-            if (!string.IsNullOrWhiteSpace(nameEntry.Text) && !string.IsNullOrWhiteSpace(ageEntry.Text))
+            if (!string.IsNullOrWhiteSpace(productEntry.Text))
             {
-                nameEntry.Text = ageEntry.Text = string.Empty;
-                collectionView.ItemsSource = await App.Database.GetPeopleAsync();
+                await App.Database.SaveListDetailedAsync(new UserListDetailed
+                {
+                    listID = int.Parse(nameof(ItemDetailViewModel.ItemId)),
+                    listContent = productEntry.Text
+                });
+
+                productEntry.Text = string.Empty;
+                collectionView.ItemsSource = await App.Database.GetListDetailedAsync();
             }
         }
     }

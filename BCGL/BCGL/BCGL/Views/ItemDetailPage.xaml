@@ -5,29 +5,24 @@
              Title="{Binding Title}">
 
     <StackLayout Spacing="20" Padding="15">
-        <!--<Label Text="Text:" FontSize="Medium" />
+        <Label Text="Text:" FontSize="Medium" />
         <Label Text="{Binding Text}" FontSize="Small"/>
         <Label Text="Description:" FontSize="Medium" />
-        <Label Text="{Binding Description}" FontSize="Small"/>-->
-        <Entry x:Name="nameEntry"
-               Placeholder="Enter name" />
-        <Entry x:Name="ageEntry"
-               Placeholder="Enter age" />
-        <Button Text="Add to Database"
+        <Label Text="{Binding Description}" FontSize="Small"/>
+        <Entry x:Name="productEntry"
+               Placeholder="Enter Product Name" />
+        <Button Text="Add to List"
                 Clicked="OnButtonClicked" />
         <CollectionView x:Name="collectionView">
             <CollectionView.ItemTemplate>
                 <DataTemplate>
                     <StackLayout>
-                        <Label Text="{Binding Name}"
+                        <Label Text="{Binding listContent}"
                                FontSize="Medium" />
-                        <Label Text="{Binding Age}"
-                               TextColor="Silver"
-                               FontSize="Small" />
                     </StackLayout>
                 </DataTemplate>
             </CollectionView.ItemTemplate>
         </CollectionView>
     </StackLayout>
-
+    
 </ContentPage>

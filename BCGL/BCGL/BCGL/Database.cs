@@ -21,7 +21,7 @@ namespace BCGL
             _database.CreateTableAsync<UserListDetailed>().Wait();
         }
 
-        public Task<List<UserList>> GetPeopleAsync()
+        public Task<List<UserList>> GetListDetailedAsync()
         {
             return _database.Table<UserList>().ToListAsync();
         }
@@ -29,6 +29,16 @@ namespace BCGL
         public Task<int> SavePersonAsync(UserData userData)
         {
             return _database.InsertAsync(userData);
+        }
+
+        public Task<int> SaveListAsync(UserList userList)
+        {
+            return _database.InsertAsync(userList);
+        }
+
+        public Task<int> SaveListDetailedAsync(UserListDetailed userListDetailed)
+        {
+            return _database.InsertAsync(userListDetailed);
         }
 
         public Task<int> SaveInfoAsync(Barcode barcode)

@@ -8,7 +8,7 @@ namespace BCGL
     {
         [PrimaryKey, ForeignKey(typeof(UserList))]
         public int listID { get; set; }
-        public int listContent { get; set; }
+        public string listContent { get; set; }
 
         [ManyToOne(CascadeOperations = CascadeOperation.CascadeRead)]
         public UserList UserList { get; set; }
