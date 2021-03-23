@@ -6,8 +6,8 @@ namespace BCGL
     [Table("UserListDetailed")]
     public class UserListDetailed
     {
-        [PrimaryKey, ForeignKey(typeof(UserList))]
-        public int listID { get; set; }
+        [ForeignKey(typeof(UserList))]
+        public string listID { get; set; }
         public string listContent { get; set; }
 
         [ManyToOne(CascadeOperations = CascadeOperation.CascadeRead)]

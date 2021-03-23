@@ -7,10 +7,11 @@ namespace BCGL.Views
 {
     public partial class ItemDetailPage : ContentPage
     {
+        ItemDetailViewModel _viewModel;
         public ItemDetailPage()
         {
             InitializeComponent();
-            BindingContext = new ItemDetailViewModel();
+            BindingContext = _viewModel = new ItemDetailViewModel();
         }
 
         protected override async void OnAppearing()
@@ -25,7 +26,7 @@ namespace BCGL.Views
             {
                 await App.Database.SaveListDetailedAsync(new UserListDetailed
                 {
-                    listID = int.Parse(nameof(ItemDetailViewModel.ItemId)),
+                    listID = _viewModel.ItemId,
                     listContent = productEntry.Text
                 });
 

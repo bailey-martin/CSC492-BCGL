@@ -6,8 +6,8 @@ namespace BCGL
     [Table("UserList")]
     public class UserList
     {
-        [PrimaryKey, AutoIncrement]
-        public int listID { get; set; }
+        [PrimaryKey]
+        public string listID { get; set; }
         [ForeignKey(typeof(UserData))]
         public string username { get; set; }
 

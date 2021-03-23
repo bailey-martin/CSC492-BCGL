@@ -64,10 +64,11 @@ namespace BCGL.ViewModels
             };
 
             await DataStore.AddItemAsync(newItem);
-
+            Console.WriteLine("newItem##################");
+            Console.WriteLine(newItem.Id);
             await App.Database.SaveListAsync(new UserList
             {
-                listID = int.Parse(newItem.Id),
+                listID = newItem.Id,
                 username = "testman123"
             }); ;
 
