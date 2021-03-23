@@ -29,7 +29,7 @@ namespace BCGL.ViewModels
         private async void OnLoginClicked(object obj)
         {
             // Prefixing with `//` switches to a different navigation stack instead of pushing to the active one
-            await Shell.Current.GoToAsync($"//{nameof(AboutPage)}");
+            await Shell.Current.GoToAsync($"//{nameof(ItemsPage)}");
         }
 
         private async void OnCreateClicked(object obj)
