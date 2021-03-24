@@ -52,6 +52,11 @@ namespace BCGL
             return _database.InsertAsync(barcode);
         }
 
+        public Task<List<Barcode>> GetInfoAsync()
+        {
+            return _database.Table<Barcode>().ToListAsync();
+        }
+
         public Task<int> DeletePersonAsync(UserData userData)
         {
             return _database.DeleteAsync(userData);
