@@ -22,18 +22,38 @@ namespace BCGL.Views
             InitializeComponent();
             this.BindingContext = new LoginViewModel();
             auth = DependencyService.Get<IAuth>();
+            Shell.SetTabBarIsVisible(this, false);
         }
 
         
 
         async void LoginClicked(object sender, EventArgs e)
         {
-            String Token = await auth.LoginWithEmailPassword(UsernameInput.Text, PasswordInput.Text);
-            if (Token != "")
+            String Token = "";
+            try
+            {
+                Token = await auth.LoginWithEmailPassword(UsernameInput.Text, PasswordInput.Text);
+                if (Token != "")
+                {
+                    await Shell.Current.GoToAsync($"{nameof(ItemsPage)}");
+                }
+                else
+                {
+                    ShowError();
+                }
+                
+            }
+            catch
+            {
+                ShowError();
+            }
+            
+         /*   if (Token != "")
             {
                 //await Navigation.PushAsync(new AboutPage());    //testing purposes (proof of concept of successful login)
                 //await Shell.Current.GoToAsync($"{nameof(ItemsPage)}");
-                await Shell.Current.GoToAsync($"//{nameof(ItemsPage)}");
+                await Shell.Current.GoToAsync($"{nameof(ItemsPage)}");
+                //await Navigation.PushAsync(new AppShell());
                 //await Shell.Current.GoToAsync($"{nameof(AboutPage)}");
                 //await DisplayAlert("auth success", "--", "OK");
             }
@@ -41,6 +61,8 @@ namespace BCGL.Views
             {
                 ShowError();
             }
+
+            */
         }
 
         async private void ShowError()
