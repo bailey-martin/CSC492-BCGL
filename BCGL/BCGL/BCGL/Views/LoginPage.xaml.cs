@@ -31,7 +31,10 @@ namespace BCGL.Views
             String Token = await auth.LoginWithEmailPassword(UsernameInput.Text, PasswordInput.Text);
             if (Token != "")
             {
-                await Navigation.PushAsync(new LoggedPage());
+                //await Navigation.PushAsync(new AboutPage());    //testing purposes (proof of concept of successful login)
+                //await Shell.Current.GoToAsync($"{nameof(ItemsPage)}");
+                await Shell.Current.GoToAsync($"//{nameof(ItemsPage)}");
+                //await Shell.Current.GoToAsync($"{nameof(AboutPage)}");
                 //await DisplayAlert("auth success", "--", "OK");
             }
             else
