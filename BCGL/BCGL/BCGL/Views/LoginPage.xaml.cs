@@ -16,11 +16,12 @@ namespace BCGL.Views
     {
 
         IAuth auth;
+        LoginViewModel _viewModel;
 
         public LoginPage()
         {
             InitializeComponent();
-            this.BindingContext = new LoginViewModel();
+            BindingContext = _viewModel = new LoginViewModel();
             auth = DependencyService.Get<IAuth>();
             Shell.SetTabBarIsVisible(this, false);
         }
@@ -35,6 +36,20 @@ namespace BCGL.Views
                 Token = await auth.LoginWithEmailPassword(UsernameInput.Text, PasswordInput.Text);
                 if (Token != "")
                 {
+                    await App.Database.SavePersonAsync(new UserData
+                    {
+                        username = UsernameInput.Text,
+                        password = PasswordInput.Text
+                    });
+
+                    Console.WriteLine(UsernameInput.Text);
+                    Console.WriteLine("################");
+                    Console.WriteLine("----------------");
+                    Console.WriteLine("################");
+                    Console.WriteLine("****************");
+                    Console.WriteLine("################");
+                    _viewModel.Username = UsernameInput.Text;
+                    App.Database.username = UsernameInput.Text;
                     await Shell.Current.GoToAsync($"{nameof(ItemsPage)}");
                 }
                 else
@@ -43,26 +58,16 @@ namespace BCGL.Views
                 }
                 
             }
-            catch
+            catch (Exception err)
             {
+                Console.WriteLine(err);
+                Console.WriteLine("#############");
+                Console.WriteLine("#############");
+                Console.WriteLine("#############");
+                Console.WriteLine("#############");
                 ShowError();
             }
             
-         /*   if (Token != "")
-            {
-                //await Navigation.PushAsync(new AboutPage());    //testing purposes (proof of concept of successful login)
-                //await Shell.Current.GoToAsync($"{nameof(ItemsPage)}");
-                await Shell.Current.GoToAsync($"{nameof(ItemsPage)}");
-                //await Navigation.PushAsync(new AppShell());
-                //await Shell.Current.GoToAsync($"{nameof(AboutPage)}");
-                //await DisplayAlert("auth success", "--", "OK");
-            }
-            else
-            {
-                ShowError();
-            }
-
-            */
         }
 
         async private void ShowError()

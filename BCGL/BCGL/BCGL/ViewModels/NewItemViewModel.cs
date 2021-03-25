@@ -67,7 +67,7 @@ namespace BCGL.ViewModels
             await App.Database.SaveListAsync(new UserList
             {
                 listID = newItem.Id,
-                username = "testman123",
+                username = App.Database.username,
                 text = Text,
                 description = description
             });

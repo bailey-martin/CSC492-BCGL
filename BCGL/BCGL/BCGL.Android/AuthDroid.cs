@@ -13,6 +13,7 @@ using BCGL;
 using Xamarin.Forms;
 using BCGL.Droid;
 using Firebase.Auth;
+using Android.Gms.Extensions;
 
 [assembly: Dependency(typeof(AuthDroid))]
 namespace BCGL.Droid
@@ -24,7 +25,8 @@ namespace BCGL.Droid
             try
             {
                 var user = await FirebaseAuth.Instance.SignInWithEmailAndPasswordAsync(email, password);
-                var token = await user.User.GetIdTokenAsync(false);
+                //var token = await user.User.GetIdTokenAsync(false);
+                var token = await (FirebaseAuth.Instance.CurrentUser.GetIdToken(true).AsAsync<GetTokenResult>());
                 return token.Token;
             }
             catch(FirebaseAuthInvalidUserException e){

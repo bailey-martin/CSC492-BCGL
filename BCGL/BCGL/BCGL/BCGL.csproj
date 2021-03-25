@@ -12,15 +12,15 @@
   </ItemGroup>
 
   <ItemGroup>
-    <EmbeddedResource Include="GoogleService-Info.plist" />
     <EmbeddedResource Include="Images\raidinclogo.png" />
+    <EmbeddedResource Include="GoogleService-Info.plist" />
   </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Xamarin.Firebase.Core" Version="60.1142.1" />
     <PackageReference Include="Xamarin.Firebase.iOS.Core" Version="6.10.4" />
-    <PackageReference Include="Xamarin.Forms" Version="4.8.0.1451" />  
-    <PackageReference Include="Xamarin.Essentials" Version="1.5.3.2" />
+    <PackageReference Include="Xamarin.Forms" Version="5.0.0.2012" />  
+    <PackageReference Include="Xamarin.Essentials" Version="1.6.1" />
     <PackageReference Include="sqlite-net-pcl" Version="1.7.335" />
     <PackageReference Include="sqlite-net-sqlcipher" Version="1.7.335" />
     <PackageReference Include="SQLiteNetExtensions" Version="2.1.0" />
@@ -31,9 +31,6 @@
 
   <ItemGroup>
     <EmbeddedResource Update="Views\Logged .xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Update="Views\LoggedPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
   </ItemGroup>

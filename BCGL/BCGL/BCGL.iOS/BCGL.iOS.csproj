@@ -139,8 +139,8 @@
     <PackageReference Include="Xamarin.Firebase.iOS.Core">
       <Version>6.10.4</Version>
     </PackageReference>
-    <PackageReference Include="Xamarin.Forms" Version="4.8.0.1451" />
-    <PackageReference Include="Xamarin.Essentials" Version="1.5.3.2" />
+    <PackageReference Include="Xamarin.Forms" Version="5.0.0.2012" />
+    <PackageReference Include="Xamarin.Essentials" Version="1.6.1" />
     <PackageReference Include="sqlite-net-pcl">
       <Version>1.7.335</Version>
     </PackageReference>
@@ -148,7 +148,7 @@
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <ItemGroup>
     <ProjectReference Include="..\BCGL\BCGL.csproj">
-      <Project>{A79166E8-CCFD-4516-8B44-38D78F0DB2CE}</Project>
+      <Project>{4A1BD184-DCC2-4921-99FB-057F4725B299}</Project>
       <Name>BCGL</Name>
     </ProjectReference>
   </ItemGroup>

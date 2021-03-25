@@ -8,6 +8,9 @@ namespace BCGL
     public class Database
     {
         readonly SQLiteAsyncConnection _database;
+        private string username1;
+
+        public string username { get => username1; set => username1 = value; }
 
         public Database(string dbPath)
         {
@@ -18,6 +21,7 @@ namespace BCGL
              */
             _database = new SQLiteAsyncConnection(dbPath);
             _database.CreateTableAsync<Barcode>().Wait();
+            _database.CreateTableAsync<UserData>().Wait();
             _database.CreateTableAsync<UserList>().Wait();
             _database.CreateTableAsync<UserListDetailed>().Wait();
         }
@@ -34,7 +38,9 @@ namespace BCGL
 
         public Task<int> SavePersonAsync(UserData userData)
         {
-            return _database.InsertAsync(userData);
+            return _database.InsertOrReplaceAsync(userData);
+
+            //return _database.InsertAsync(userData);
         }
 
         public Task<int> SaveListAsync(UserList userList)

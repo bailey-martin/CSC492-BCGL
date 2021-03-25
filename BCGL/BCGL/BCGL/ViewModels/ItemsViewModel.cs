@@ -35,7 +35,15 @@ namespace BCGL.ViewModels
             try
             {
                 Items.Clear();
-                var itemIDs = await App.Database.GetListAsync("testman123");
+                var username = App.Database.username;
+                Console.WriteLine(username);
+                Console.WriteLine("################");
+                Console.WriteLine("----------------");
+                Console.WriteLine("################");
+                Console.WriteLine("!!!!!!!!!");
+                Console.WriteLine("################");
+
+                var itemIDs = await App.Database.GetListAsync(username);
                 foreach (var id in itemIDs)
                 {
                     Item newItem = new Item()
@@ -44,6 +52,7 @@ namespace BCGL.ViewModels
                         Text = id.text,
                         Description = id.description
                     };
+                    Console.WriteLine(id.text);
                     Items.Add(newItem);
                 }
             }

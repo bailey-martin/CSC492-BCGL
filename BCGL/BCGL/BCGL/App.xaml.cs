@@ -1,6 +1,7 @@
 ﻿using BCGL.Services;
 using BCGL.Views;
 using System;
+using System.IO;
 using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
