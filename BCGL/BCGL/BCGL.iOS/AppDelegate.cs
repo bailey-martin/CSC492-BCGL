@@ -26,6 +26,10 @@ namespace BCGL.iOS
             global::Xamarin.Forms.Forms.Init();
             LoadApplication(new App());
 
+            //Firebase Addition
+            Firebase.Core.App.Configure();
+            //End of Firebase Addition
+
             return base.FinishedLaunching(app, options);
         }
     }
