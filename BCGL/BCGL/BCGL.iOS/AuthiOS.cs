@@ -19,6 +19,7 @@ namespace BCGL.iOS
         {
             try
             {
+                //[FIRAuth.auth useUserAccessGroup:nil error:nil];
                 var user = await Auth.DefaultInstance.SignInWithPasswordAsync(email, password);
                 return await user.User.GetIdTokenAsync();
             }
