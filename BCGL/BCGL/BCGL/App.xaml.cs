@@ -9,12 +9,33 @@ namespace BCGL
 {
     public partial class App : Application
     {
+        static Database database;
+
+        public static Database Database
+        {
+            get
+            {
+                if (database == null)
+                {
+                    database = new Database(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "MyDB_Final.db3"));
+                }
+                return database;
+            }
+        }
 
         public App()
         {
             InitializeComponent();
 
             //DependencyService.Register<MockDataStore>();
+            ///**
+            // * Get DB Path
+            Console.WriteLine("################");
+            Console.WriteLine("################");
+            Console.WriteLine("################");
+            Console.WriteLine(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData)));
+            //*/
+            DependencyService.Register<MockDataStore>();
             MainPage = new AppShell();
             //MainPage = new NavigationPage(new LoginPage());
         }

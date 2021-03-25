@@ -35,10 +35,16 @@ namespace BCGL.ViewModels
             try
             {
                 Items.Clear();
-                var items = await DataStore.GetItemsAsync(true);
-                foreach (var item in items)
+                var itemIDs = await App.Database.GetListAsync("testman123");
+                foreach (var id in itemIDs)
                 {
-                    Items.Add(item);
+                    Item newItem = new Item()
+                    {
+                        Id = id.listID,
+                        Text = id.text,
+                        Description = id.description
+                    };
+                    Items.Add(newItem);
                 }
             }
             catch (Exception ex)

@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="BCGL.Views.ItemDetailPage"
+             x:Class="BCGL.Views.ItemDetailPage"  
              Title="{Binding Title}">
 
     <StackLayout Spacing="20" Padding="15">
@@ -9,6 +9,20 @@
         <Label Text="{Binding Text}" FontSize="Small"/>
         <Label Text="Description:" FontSize="Medium" />
         <Label Text="{Binding Description}" FontSize="Small"/>
+        <Entry x:Name="productEntry"
+               Placeholder="Enter Product Name" />
+        <Button Text="Add to List"
+                Clicked="OnButtonClicked" />
+        <CollectionView x:Name="collectionView">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <StackLayout>
+                        <Label Text="{Binding listContent}"
+                               FontSize="Medium" />
+                    </StackLayout>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
     </StackLayout>
     
 </ContentPage>

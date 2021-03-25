@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -70,6 +70,9 @@
     <PackageReference Include="Xamarin.GooglePlayServices.Base">
       <Version>60.1142.1</Version>
     </PackageReference>
+    <PackageReference Include="sqlite-net-pcl">
+      <Version>1.7.335</Version>
+    </PackageReference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AuthDroid.cs" />
@@ -107,7 +110,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BCGL\BCGL.csproj">
-      <Project>{E4A2751D-8143-45B1-8104-9E90DD721BA1}</Project>
+      <Project>{4A1BD184-DCC2-4921-99FB-057F4725B299}</Project>
       <Name>BCGL</Name>
     </ProjectReference>
   </ItemGroup>
