@@ -12,4 +12,4 @@ permalink: /documents/
 
 [Design Document 1](Documents/BCGLDesignDocument1.pdf)
 
-[Design Document 2](Documents/BCGLDesignDocument2 PDF.pdf)
+[Design Document 2](Documents/BCGLDesignDocument2.pdf)
