@@ -21,11 +21,20 @@ namespace BCGL.Droid
 
             Xamarin.Essentials.Platform.Init(this, savedInstanceState);
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
+
+            //Barcode Scan NuGet Addition
+            ZXing.Net.Mobile.Forms.Android.Platform.Init();
+            //End of Barcode Scan NuGet Addition
+
             LoadApplication(new App());
         }
         public override void OnRequestPermissionsResult(int requestCode, string[] permissions, [GeneratedEnum] Android.Content.PM.Permission[] grantResults)
         {
             Xamarin.Essentials.Platform.OnRequestPermissionsResult(requestCode, permissions, grantResults);
+
+            //Barcode Scan NuGet Addition
+            global::ZXing.Net.Mobile.Android.PermissionsHandler.OnRequestPermissionsResult(requestCode, permissions, grantResults);
+            //End of Barcode Scan NuGet Addition
 
             base.OnRequestPermissionsResult(requestCode, permissions, grantResults);
         }

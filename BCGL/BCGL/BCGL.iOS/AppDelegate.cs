@@ -24,6 +24,10 @@ namespace BCGL.iOS
         {
             global::Xamarin.Forms.Forms.SetFlags("CollectionView_Experimental");
             global::Xamarin.Forms.Forms.Init();
+
+            //Barcode Scan NuGet Addition
+            ZXing.Net.Mobile.Forms.iOS.Platform.Init();
+            //End of Barcode Scan NuGet Addition
             LoadApplication(new App());
 
             //Firebase Addition
