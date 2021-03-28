@@ -36,6 +36,7 @@
         <ShellContent Title="Add Items" Icon="icon_feed.png" Route="addItemsToDBPage" ContentTemplate="{DataTemplate local:addItemsToDBPage}" />
         <ShellContent Title="Scan Items" Icon="icon_feed.png" Route="ScannerPage" ContentTemplate="{DataTemplate local:ScannerPage}" />
         <ShellContent Title="Scan Barcode" Icon="icon_feed.png" Route="BarcodeScannerPage" ContentTemplate="{DataTemplate local:BarcodeScannerPage}" />
+        <ShellContent Title="Search" Icon="icon_feed.png" Route="ItemSearchPage" ContentTemplate="{DataTemplate local:ItemSearchPage}" />
     </TabBar>
 
     <!--

@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BCGL.Views.ItemSearchPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Search for an item manually by entering the product's SKU number:"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+            <Entry x:Name="searchTextField" Placeholder="Enter product SKU here" />
+            <Button x:Name="searchButton" Text="Search" Clicked="searchButtonClicked" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

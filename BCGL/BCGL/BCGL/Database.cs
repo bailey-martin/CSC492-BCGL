@@ -36,6 +36,27 @@ namespace BCGL
             return _database.Table<UserList>().Where(items => items.username == username).ToListAsync();
         }
 
+        //
+
+        public Task<List<Barcode>> GetBarcodesAsync(string barcodeNumber)
+        {
+            Console.WriteLine("Received barcode: " + barcodeNumber);
+            int barcodeNumberConverted = 0;
+            try
+            {
+                barcodeNumberConverted = Int32.Parse(barcodeNumber);
+                Console.WriteLine("Post conversion barcode: " + barcodeNumber);
+            }
+            catch (FormatException e)
+            {
+                Console.WriteLine(e.Message);
+            }
+            //return _database.Table<Barcode>().Where(items => items.SKU == barcodeNumberConverted).ToListAsync();
+            return _database.Table<Barcode>().Where(i => i.SKU == barcodeNumberConverted).FirstOrDefaultAsync();
+        }
+
+        //
+
         public Task<int> SavePersonAsync(UserData userData)
         {
             return _database.InsertOrReplaceAsync(userData);
