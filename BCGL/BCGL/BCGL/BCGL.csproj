@@ -13,7 +13,6 @@
 
   <ItemGroup>
     <EmbeddedResource Include="Images\raidinclogo.png" />
-    <EmbeddedResource Include="GoogleService-Info.plist" />
   </ItemGroup>
 
   <ItemGroup>
@@ -31,6 +30,9 @@
 
   <ItemGroup>
     <EmbeddedResource Update="Views\Logged .xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\ScannerPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
   </ItemGroup>
