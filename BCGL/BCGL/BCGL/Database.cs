@@ -38,6 +38,11 @@ namespace BCGL
 
         //
 
+        public Task<List<Barcode>> GetBarcodesAllAsync()
+        {
+            return _database.Table<Barcode>().ToListAsync();
+        }
+
         public Task<List<Barcode>> GetBarcodesAsync(string barcodeNumber)
         {
             Console.WriteLine("Received barcode: " + barcodeNumber);
@@ -51,8 +56,8 @@ namespace BCGL
             {
                 Console.WriteLine(e.Message);
             }
-            //return _database.Table<Barcode>().Where(items => items.SKU == barcodeNumberConverted).ToListAsync();
-            return _database.Table<Barcode>().Where(i => i.SKU == barcodeNumberConverted).FirstOrDefaultAsync();
+            return _database.Table<Barcode>().Where(items => items.SKU == barcodeNumberConverted).ToListAsync();
+            //return _database.Table<Barcode>().Where(i => i.SKU == barcodeNumberConverted).FirstOrDefaultAsync();
         }
 
         //

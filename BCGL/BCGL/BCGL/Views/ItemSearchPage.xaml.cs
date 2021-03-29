@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 using SQLite;
 
+using BCGL.ViewModels;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -19,24 +20,20 @@ namespace BCGL.Views
             InitializeComponent();
         }
 
-        void searchButtonClicked(System.Object sender, System.EventArgs e)
+        public async void searchButtonClicked(System.Object sender, System.EventArgs e)
         {
             var searchText = searchTextField.Text;
             Console.WriteLine("The returned text is: " + searchText);
-
+            collectionView.ItemsSource = await App.Database.GetBarcodesAsync(searchText);
             //call search db method with the contents of the search text field
             Console.WriteLine(App.Database.GetBarcodesAsync(searchText).ToString());
         }
 
-        /*protected override void OnAppearing()
+        protected override async void OnAppearing()
         {
             base.OnAppearing();
 
-            using (SQLiteConnection myConnection = new SQLiteConnection(App.FilePath))
-            {
-                myConnection.CreateTable<Barcode>();
-                var barcodes = myConnection.Table<Barcode>().ToList();
-            }
-        } */
+            collectionView.ItemsSource = await App.Database.GetBarcodesAllAsync();
+        } 
     }
 }

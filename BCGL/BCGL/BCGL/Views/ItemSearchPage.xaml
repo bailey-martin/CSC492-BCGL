@@ -9,6 +9,16 @@
                 HorizontalOptions="CenterAndExpand" />
             <Entry x:Name="searchTextField" Placeholder="Enter product SKU here" />
             <Button x:Name="searchButton" Text="Search" Clicked="searchButtonClicked" />
+            <CollectionView x:Name="collectionView">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <StackLayout>
+                        <Label Text="{Binding ProductName}"
+                               FontSize="Medium" />
+                    </StackLayout>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
