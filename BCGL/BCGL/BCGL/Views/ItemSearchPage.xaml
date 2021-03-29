@@ -7,8 +7,7 @@
             <Label Text="Search for an item manually by entering the product's SKU number:"
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="CenterAndExpand" />
-            <Entry x:Name="searchTextField" Placeholder="Enter product SKU here" />
-            <Button x:Name="searchButton" Text="Search" Clicked="searchButtonClicked" />
+            <SearchBar x:Name="searchTextField" TextChanged="OnTextChanged" Placeholder="Enter product SKU here"></SearchBar>
             <CollectionView x:Name="collectionView">
             <CollectionView.ItemTemplate>
                 <DataTemplate>

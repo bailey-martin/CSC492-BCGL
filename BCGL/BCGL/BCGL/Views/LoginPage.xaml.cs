@@ -36,9 +36,10 @@ namespace BCGL.Views
                 Token = await auth.LoginWithEmailPassword(UsernameInput.Text, PasswordInput.Text);
                 if (Token != "")
                 {
+                    string username = UsernameInput.Text.ToLower();
                     await App.Database.SavePersonAsync(new UserData
                     {
-                        username = UsernameInput.Text,
+                        username = username,
                         password = PasswordInput.Text
                     });
 
@@ -48,8 +49,8 @@ namespace BCGL.Views
                     Console.WriteLine("################");
                     Console.WriteLine("****************");
                     Console.WriteLine("################");
-                    _viewModel.Username = UsernameInput.Text;
-                    App.Database.username = UsernameInput.Text;
+                    _viewModel.Username = username;
+                    App.Database.username = username;
                     await Shell.Current.GoToAsync($"{nameof(ItemsPage)}");
                 }
                 else

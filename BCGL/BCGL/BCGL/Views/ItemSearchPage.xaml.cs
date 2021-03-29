@@ -20,20 +20,29 @@ namespace BCGL.Views
             InitializeComponent();
         }
 
-        public async void searchButtonClicked(System.Object sender, System.EventArgs e)
-        {
-            var searchText = searchTextField.Text;
-            Console.WriteLine("The returned text is: " + searchText);
-            collectionView.ItemsSource = await App.Database.GetBarcodesAsync(searchText);
-            //call search db method with the contents of the search text field
-            Console.WriteLine(App.Database.GetBarcodesAsync(searchText).ToString());
-        }
-
         protected override async void OnAppearing()
         {
             base.OnAppearing();
 
             collectionView.ItemsSource = await App.Database.GetBarcodesAllAsync();
-        } 
+        }
+
+        public async void searchFunction(string searchTarget)
+        {
+            if (string.IsNullOrWhiteSpace(searchTarget)) { collectionView.ItemsSource = await App.Database.GetBarcodesAllAsync(); }
+            else { collectionView.ItemsSource = await App.Database.GetBarcodesAsync(searchTarget); }
+        }
+
+        void OnTextChanged(object sender, EventArgs e)
+        {
+            SearchBar searchBar = (SearchBar)sender;
+            searchFunction(searchBar.Text);
+        }
+        /**
+         * Todo:
+         * 1. Search bar functionality 
+         *      - Add to list
+         *      - - Be able to select item
+         */
     }
 }
