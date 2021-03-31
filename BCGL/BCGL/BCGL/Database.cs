@@ -74,6 +74,11 @@ namespace BCGL
             return _database.InsertAsync(userList);
         }
 
+        public Task<int> UpdateListAsync(UserList userList)
+        {
+            return _database.UpdateAsync(userList);
+        }
+
         public Task<int> SaveListDetailedAsync(UserListDetailed userListDetailed)
         {
             return _database.InsertAsync(userListDetailed);
@@ -92,6 +97,17 @@ namespace BCGL
         public Task<int> DeletePersonAsync(UserData userData)
         {
             return _database.DeleteAsync(userData);
+        }
+
+
+        public Task<int> DeleteListAsync(UserList userList)
+        {
+            return _database.DeleteAsync(userList);
+        }
+
+        public Task<int> DeleteListDetailedAsync(UserListDetailed userListDetailed)
+        {
+            return _database.DeleteAsync(userListDetailed);
         }
     }
 }

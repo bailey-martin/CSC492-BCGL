@@ -42,19 +42,13 @@ namespace BCGL.Views
                         username = username,
                         password = PasswordInput.Text
                     });
-
-                    Console.WriteLine(UsernameInput.Text);
-                    Console.WriteLine("################");
-                    Console.WriteLine("----------------");
-                    Console.WriteLine("################");
-                    Console.WriteLine("****************");
-                    Console.WriteLine("################");
                     _viewModel.Username = username;
                     App.Database.username = username;
                     await Shell.Current.GoToAsync($"{nameof(ItemsPage)}");
                 }
-                else
+                else 
                 {
+                    
                     ShowError();
                 }
                 
@@ -62,10 +56,6 @@ namespace BCGL.Views
             catch (Exception err)
             {
                 Console.WriteLine(err);
-                Console.WriteLine("#############");
-                Console.WriteLine("#############");
-                Console.WriteLine("#############");
-                Console.WriteLine("#############");
                 ShowError();
             }
             

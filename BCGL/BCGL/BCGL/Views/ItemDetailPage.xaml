@@ -18,7 +18,11 @@
                 <DataTemplate>
                     <StackLayout>
                         <Label Text="{Binding listContent}"
-                               FontSize="Medium" />
+                               FontSize="Medium"
+                               x:Name="listItem"/>
+                        <StackLayout.GestureRecognizers>
+                            <SwipeGestureRecognizer Direction="Left"  Swiped="OnSwiped" CommandParameter="{Binding .}"/>
+                        </StackLayout.GestureRecognizers>
                     </StackLayout>
                 </DataTemplate>
             </CollectionView.ItemTemplate>
