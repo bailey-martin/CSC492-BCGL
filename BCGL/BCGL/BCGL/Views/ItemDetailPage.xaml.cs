@@ -8,6 +8,7 @@ namespace BCGL.Views
     public partial class ItemDetailPage : ContentPage
     {
         ItemDetailViewModel _viewModel;
+        UserListDetailed listItem;
         public ItemDetailPage()
         {
             InitializeComponent();
@@ -22,22 +23,17 @@ namespace BCGL.Views
 
         async void OnButtonClicked(object sender, EventArgs e)
         {
-            if (!string.IsNullOrWhiteSpace(productEntry.Text))
+            if (listItem != null)
             {
-                await App.Database.SaveListDetailedAsync(new UserListDetailed
-                {
-                    listID = _viewModel.ItemId,
-                    listContent = productEntry.Text,
-                    record = Guid.NewGuid().ToString()
-                });
-
-                productEntry.Text = string.Empty;
+                await App.Database.SaveListDetailedAsync(listItem);
                 collectionView.ItemsSource = await App.Database.GetListDetailedAsync(_viewModel.ItemId);
+                listItem = null;
             }
         }
 
         async void OnSwiped(object sender, SwipedEventArgs e)
         {
+            
             switch (e.Direction)
             {
                 case SwipeDirection.Left:
@@ -56,6 +52,30 @@ namespace BCGL.Views
                     }
                     break;
             }
+        }
+
+        public async void searchFunction(string searchTarget)
+        {
+            if (!string.IsNullOrWhiteSpace(searchTarget))
+            { searchResults.ItemsSource = await App.Database.GetBarcodesNameAsync(searchTarget); }
+            else { searchResults.ItemsSource = ""; }
+        }
+
+        void OnTextChanged(object sender, EventArgs e)
+        {
+            SearchBar searchBar = (SearchBar)sender;
+            searchFunction(searchBar.Text);
+        }
+
+        void TapGestureRecognizer_Tapped(object sender, EventArgs e)
+        {
+            Barcode item = (Barcode)((StackLayout)sender).BindingContext;
+            listItem = new UserListDetailed
+            {
+                listID = _viewModel.ItemId,
+                listContent = item.ProductName,
+                record = Guid.NewGuid().ToString()
+            };
         }
     }
 }

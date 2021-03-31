@@ -1,16 +1,30 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="BCGL.Views.ItemDetailPage"  
+             x:Class="BCGL.Views.ItemDetailPage"   
              Title="{Binding Title}">
 
     <StackLayout Spacing="20" Padding="15">
-        <Label Text="Text:" FontSize="Medium" />
-        <Label Text="{Binding Text}" FontSize="Small"/>
-        <Label Text="Description:" FontSize="Medium" />
-        <Label Text="{Binding Description}" FontSize="Small"/>
-        <Entry x:Name="productEntry"
-               Placeholder="Enter Product Name" />
+        <SearchBar x:Name="searchTextField" TextChanged="OnTextChanged" Placeholder="Enter product SKU here"></SearchBar>
+        <ScrollView>
+                <CollectionView x:Name="searchResults">
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+                            <StackLayout>
+                                <Label Text="{Binding ProductName}"
+                                       FontSize="Medium" />
+                                <StackLayout.GestureRecognizers>
+                                    <TapGestureRecognizer 
+                                        NumberOfTapsRequired="1"
+                                        Tapped="TapGestureRecognizer_Tapped"
+                                        CommandParameter="{Binding .}">
+                                    </TapGestureRecognizer>
+                                </StackLayout.GestureRecognizers>
+                            </StackLayout>
+                        </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+            </ScrollView>
         <Button Text="Add to List"
                 Clicked="OnButtonClicked" />
         <CollectionView x:Name="collectionView">

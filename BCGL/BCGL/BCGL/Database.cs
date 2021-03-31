@@ -20,6 +20,10 @@ namespace BCGL
              * userListDetailed - listId/listContent
              */
             _database = new SQLiteAsyncConnection(dbPath);
+
+            //_database.DeleteAllAsync<UserListDetailed>().Wait();
+            //_database.DropTableAsync<UserListDetailed>().Wait();
+
             _database.CreateTableAsync<Barcode>().Wait();
             _database.CreateTableAsync<UserData>().Wait();
             _database.CreateTableAsync<UserList>().Wait();
@@ -58,6 +62,11 @@ namespace BCGL
             }
             return _database.Table<Barcode>().Where(items => items.SKU == barcodeNumberConverted).ToListAsync();
             //return _database.Table<Barcode>().Where(i => i.SKU == barcodeNumberConverted).FirstOrDefaultAsync();
+        }
+
+        public Task<List<Barcode>> GetBarcodesNameAsync(string productName)
+        {
+            return _database.Table<Barcode>().Where(items => items.ProductName.ToLower() == productName.ToLower()).ToListAsync();
         }
 
         //
