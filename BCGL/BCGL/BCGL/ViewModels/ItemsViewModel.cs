@@ -132,11 +132,10 @@ namespace BCGL.ViewModels
             //        text = item.Text,
             //        description = item.Description
             //    });
-            //    Items.Add(item);
             //    Items.Remove(item);
+            //    Items.Add(item);
             //}
-            Console.WriteLine(item.Text);
-            Console.WriteLine(item.Description);
+
             bool changeTitle = await App.Current.MainPage.DisplayAlert("Question?", "Do you want to edit the item title: " + item.Text + "?", "Yes", "No");
             if (changeTitle)
             {
@@ -165,9 +164,7 @@ namespace BCGL.ViewModels
                 text = item.Text,
                 description = item.Description
             });
-            //Items.Add(item);
             Items.Remove(item);
-            
             Items.Add(item);
         }
 
