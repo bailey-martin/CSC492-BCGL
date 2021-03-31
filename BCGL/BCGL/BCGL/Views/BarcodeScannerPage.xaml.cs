@@ -22,6 +22,8 @@ namespace BCGL.Views
             Device.BeginInvokeOnMainThread(() =>
             {
                 scanResultText.Text = result.Text + " (type: " + result.BarcodeFormat.ToString() + ")";
+                App.Database.scannerResult = result.Text;
+                Shell.Current.GoToAsync("..");
             });
         }
     }

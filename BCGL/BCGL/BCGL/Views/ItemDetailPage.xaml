@@ -27,6 +27,8 @@
             </ScrollView>
         <Button Text="Add to List"
                 Clicked="OnButtonClicked" />
+        <Button Text="Add to list by camera"
+                Clicked="OnButtonTwoClicked" />
         <CollectionView x:Name="collectionView">
             <CollectionView.ItemTemplate>
                 <DataTemplate>

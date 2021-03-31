@@ -31,6 +31,11 @@ namespace BCGL.Views
             }
         }
 
+        async void OnButtonTwoClicked(object sender, EventArgs e)
+        {
+            await Shell.Current.GoToAsync($"{nameof(BarcodeScannerPage)}");
+        }
+
         async void OnSwiped(object sender, SwipedEventArgs e)
         {
             

@@ -15,6 +15,7 @@ namespace BCGL
             Routing.RegisterRoute(nameof(NewItemPage), typeof(NewItemPage));
             Routing.RegisterRoute(nameof(ItemsPage), typeof(ItemsPage));
             Routing.RegisterRoute(nameof(addItemsToDBPage), typeof(addItemsToDBPage));
+            Routing.RegisterRoute(nameof(BarcodeScannerPage), typeof(BarcodeScannerPage));
         }
 
     }

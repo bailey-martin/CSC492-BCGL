@@ -9,8 +9,9 @@ namespace BCGL
     {
         readonly SQLiteAsyncConnection _database;
         private string username1;
-
+        private string result;
         public string username { get => username1; set => username1 = value; }
+        public string scannerResult { get => result; set => result = value; }
 
         public Database(string dbPath)
         {
