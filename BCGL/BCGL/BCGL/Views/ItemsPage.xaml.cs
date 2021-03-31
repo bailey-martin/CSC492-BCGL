@@ -28,28 +28,5 @@ namespace BCGL.Views
             base.OnAppearing();
             _viewModel.OnAppearing();
         }
-
-
-        private void OnSwipe(object sender, SwipedEventArgs e)
-        {
-            switch (e.Direction)
-            {
-                case SwipeDirection.Left:
-                    // Handle the swipe
-                    // Edit
-                    Console.WriteLine("left");
-                    break;
-                case SwipeDirection.Right:
-                    // Handle the swipe
-                    // Delete
-                    break;
-                case SwipeDirection.Up:
-                    // Handle the swipe
-                    break;
-                case SwipeDirection.Down:
-                    // Handle the swipe
-                    break;
-            }
-        }
     }
 }

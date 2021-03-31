@@ -3,9 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
 using SQLite;
-
 using BCGL.ViewModels;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
@@ -38,11 +36,5 @@ namespace BCGL.Views
             SearchBar searchBar = (SearchBar)sender;
             searchFunction(searchBar.Text);
         }
-        /**
-         * Todo:
-         * 1. Search bar functionality 
-         *      - Add to list
-         *      - - Be able to select item
-         */
     }
 }

@@ -107,34 +107,68 @@ namespace BCGL.ViewModels
                 return;
 
             Console.WriteLine("Left");
-            bool answer = await App.Current.MainPage.DisplayAlert("Question?", "Are You sure you want to Edit the item: " + item.Text + "?", "Yes", "No");
-            if (answer)
+            //bool answer = await App.Current.MainPage.DisplayAlert("Question?", "Are You sure you want to Edit the item: " + item.Text + "?", "Yes", "No");
+            //if (answer)
+            //{
+            //    // Go to new Screen
+            //    string titleChange = await App.Current.MainPage.DisplayPromptAsync("Change list title:", "Change list title", "OK", "Cancel", item.Text);
+            //    string descriptionChange = await App.Current.MainPage.DisplayPromptAsync("Change list description:", "Change list description", "OK", "Cancel", item.Description);
+            //    if (string.IsNullOrEmpty(titleChange) || string.IsNullOrWhiteSpace(titleChange))
+            //    {
+            //        titleChange = item.Text;
+            //    }
+            //    if (string.IsNullOrEmpty(descriptionChange) || string.IsNullOrWhiteSpace(descriptionChange))
+            //    {
+            //        descriptionChange = item.Description;
+            //    }
+            //    item.Text = titleChange;
+            //    item.Description = descriptionChange;
+
+            //    await DataStore.UpdateItemAsync(item);
+            //    await App.Database.UpdateListAsync(new UserList
+            //    {
+            //        listID = item.Id,
+            //        username = App.Database.username,
+            //        text = item.Text,
+            //        description = item.Description
+            //    });
+            //    Items.Add(item);
+            //    Items.Remove(item);
+            //}
+            Console.WriteLine(item.Text);
+            Console.WriteLine(item.Description);
+            bool changeTitle = await App.Current.MainPage.DisplayAlert("Question?", "Do you want to edit the item title: " + item.Text + "?", "Yes", "No");
+            if (changeTitle)
             {
-                // Go to new Screen
                 string titleChange = await App.Current.MainPage.DisplayPromptAsync("Change list title:", "Change list title", "OK", "Cancel", item.Text);
-                string descriptionChange = await App.Current.MainPage.DisplayPromptAsync("Change list description:", "Change list description", "OK", "Cancel", item.Description);
                 if (string.IsNullOrEmpty(titleChange) || string.IsNullOrWhiteSpace(titleChange))
                 {
                     titleChange = item.Text;
                 }
+                item.Text = titleChange;
+            }
+            bool changedescription = await App.Current.MainPage.DisplayAlert("Question?", "Do you want to edit the item description: " + item.Description + "?", "Yes", "No");
+            if (changedescription)
+            {
+                string descriptionChange = await App.Current.MainPage.DisplayPromptAsync("Change list description:", "Change list description", "OK", "Cancel", item.Description);
                 if (string.IsNullOrEmpty(descriptionChange) || string.IsNullOrWhiteSpace(descriptionChange))
                 {
                     descriptionChange = item.Description;
                 }
-                item.Text = titleChange;
                 item.Description = descriptionChange;
-
-                await DataStore.UpdateItemAsync(item);
-                await App.Database.UpdateListAsync(new UserList
-                {
-                    listID = item.Id,
-                    username = App.Database.username,
-                    text = item.Text,
-                    description = item.Description
-                });
-                Items.Add(item);
-                Items.Remove(item);
             }
+            DataStore.UpdateItemAsync(item).Wait();
+            await App.Database.UpdateListAsync(new UserList
+            {
+                listID = item.Id,
+                username = App.Database.username,
+                text = item.Text,
+                description = item.Description
+            });
+            //Items.Add(item);
+            Items.Remove(item);
+            
+            Items.Add(item);
         }
 
         async void OnSwipedRight(Item item)

@@ -21,6 +21,7 @@ namespace BCGL.Views
             base.OnAppearing();
             collectionView.ItemsSource = await App.Database.GetInfoAsync();
         }
+
         async void OnButtonClicked(object sender, EventArgs e)
         {
             if (!string.IsNullOrWhiteSpace(productNameEntry.Text))
