@@ -8,7 +8,7 @@ namespace BCGL.ViewModels
     {
         private string sku;
         private string productName;
-        private decimal price;
+        private double price;
 
         public addItemsToDBModel()
         {
@@ -25,7 +25,7 @@ namespace BCGL.ViewModels
                 && !String.IsNullOrWhiteSpace(productName)
                 && !String.IsNullOrWhiteSpace(price.ToString())
                 && !String.IsNullOrEmpty(price.ToString())
-                && decimal.Parse(price.ToString()) > 0
+                && double.Parse(price.ToString()) > 0
                 && sku.Length == 12;
         }
 
@@ -41,7 +41,7 @@ namespace BCGL.ViewModels
             set => SetProperty(ref productName, value);
         }
 
-        public decimal Price
+        public double Price
         {
             get => price;
             set => SetProperty(ref price, value);

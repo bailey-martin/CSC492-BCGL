@@ -8,6 +8,6 @@ namespace BCGL
         [Unique, PrimaryKey]
         public string SKU { get; set; }
         public string ProductName { get; set; }
-        public decimal Price { get; set; }
+        public double Price { get; set; }
     }
 }
