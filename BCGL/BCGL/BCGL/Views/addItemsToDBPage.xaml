@@ -10,11 +10,11 @@
     <ContentPage.Content>
         <StackLayout>
             <Label Text="SKU:" FontSize="Medium" />
-            <Entry Text="{Binding SKU, Mode=TwoWay}" FontSize="Medium" x:Name="skuEntry" />
+            <Entry Text="{Binding SKU, Mode=TwoWay}" FontSize="Medium" x:Name="skuEntry" Keyboard="Numeric"/>
             <Label Text="ProductName" FontSize="Medium" />
             <Editor Text="{Binding ProductName, Mode=TwoWay}" AutoSize="TextChanges" FontSize="Medium" Margin="0" x:Name="productNameEntry" />
             <Label Text="Price" FontSize="Medium" />
-            <Editor Text="{Binding Price, Mode=TwoWay}" AutoSize="TextChanges" FontSize="Medium" Margin="0" x:Name="priceEntry" />
+            <Editor Text="{Binding Price, Mode=TwoWay}" AutoSize="TextChanges" FontSize="Medium" Margin="0" x:Name="priceEntry" Keyboard="Numeric"/>
             <StackLayout Orientation="Horizontal">
                 <Button Text="Add" Command="{Binding AddCommand}" HorizontalOptions="FillAndExpand" Clicked="OnButtonClicked"></Button>
             </StackLayout>

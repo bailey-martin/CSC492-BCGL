@@ -19,6 +19,21 @@ namespace BCGL.Views
         {
             base.OnAppearing();
             collectionView.ItemsSource = await App.Database.GetListDetailedAsync(_viewModel.ItemId);
+            if (App.Database.scannerResult != null)
+            {
+                Console.WriteLine(App.Database.scannerResult);
+                string barcode = App.Database.scannerResult;
+                Barcode barcodeItem = await App.Database.GetBarcodeAsync(barcode);
+                if (barcodeItem == null)
+                {
+                    searchTextField.Text = "No Item Found";
+                }
+                else
+                {
+                    searchTextField.Text = barcodeItem.ProductName;
+                }
+                App.Database.scannerResult = null;
+            }
         }
 
         async void OnButtonClicked(object sender, EventArgs e)

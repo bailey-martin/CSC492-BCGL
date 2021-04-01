@@ -15,15 +15,12 @@ namespace BCGL
 
         public Database(string dbPath)
         {
-            /**
-             * userData - password/username, username Unique
-             * userList - username/listId
-             * userListDetailed - listId/listContent
-             */
             _database = new SQLiteAsyncConnection(dbPath);
 
             //_database.DeleteAllAsync<UserListDetailed>().Wait();
             //_database.DropTableAsync<UserListDetailed>().Wait();
+            //_database.DeleteAllAsync<Barcode>().Wait();
+            //_database.DropTableAsync<Barcode>().Wait();
 
             _database.CreateTableAsync<Barcode>().Wait();
             _database.CreateTableAsync<UserData>().Wait();
@@ -31,90 +28,88 @@ namespace BCGL
             _database.CreateTableAsync<UserListDetailed>().Wait();
         }
 
+        // USED - set specific lists
         public Task<List<UserListDetailed>> GetListDetailedAsync(string listID)
         {
             return _database.Table<UserListDetailed>().Where(items => items.listID == listID).ToListAsync();
         }
 
+        // USED - set intial items on homepage
         public Task<List<UserList>> GetListAsync(string username)
         {
             return _database.Table<UserList>().Where(items => items.username == username).ToListAsync();
         }
 
-        //
-
+        // USED? - on search page initally display all products available
         public Task<List<Barcode>> GetBarcodesAllAsync()
         {
             return _database.Table<Barcode>().ToListAsync();
         }
 
+        // Only used on itemSearchPage
         public Task<List<Barcode>> GetBarcodesAsync(string barcodeNumber)
         {
             Console.WriteLine("Received barcode: " + barcodeNumber);
-            int barcodeNumberConverted = 0;
-            try
-            {
-                barcodeNumberConverted = Int32.Parse(barcodeNumber);
-                Console.WriteLine("Post conversion barcode: " + barcodeNumber);
-            }
-            catch (FormatException e)
-            {
-                Console.WriteLine(e.Message);
-            }
-            return _database.Table<Barcode>().Where(items => items.SKU == barcodeNumberConverted).ToListAsync();
-            //return _database.Table<Barcode>().Where(i => i.SKU == barcodeNumberConverted).FirstOrDefaultAsync();
+            return _database.Table<Barcode>().Where(items => items.SKU == barcodeNumber).ToListAsync();
         }
 
+        // Used - retrive barcode object from sku
+        public Task<Barcode> GetBarcodeAsync(string barcodeNumber)
+        {
+            Console.WriteLine("Received barcode: " + barcodeNumber);
+            return _database.Table<Barcode>().Where(items => items.SKU == barcodeNumber).FirstOrDefaultAsync();
+        }
+
+        // USED - display all record that match a product name
         public Task<List<Barcode>> GetBarcodesNameAsync(string productName)
         {
             return _database.Table<Barcode>().Where(items => items.ProductName.ToLower() == productName.ToLower()).ToListAsync();
         }
 
-        //
-
+        // USED - local copy of userdata to bind lists to
         public Task<int> SavePersonAsync(UserData userData)
         {
             return _database.InsertOrReplaceAsync(userData);
-
-            //return _database.InsertAsync(userData);
         }
 
+        // USED - save user custom list
         public Task<int> SaveListAsync(UserList userList)
         {
             return _database.InsertAsync(userList);
         }
 
+        // USED - update user custom list elements
         public Task<int> UpdateListAsync(UserList userList)
         {
             return _database.UpdateAsync(userList);
         }
 
+        // USED - add item to detailed custom list
         public Task<int> SaveListDetailedAsync(UserListDetailed userListDetailed)
         {
             return _database.InsertAsync(userListDetailed);
         }
 
+        // USED only to add barcode items
         public Task<int> SaveInfoAsync(Barcode barcode)
         {
             return _database.InsertAsync(barcode);
         }
 
+        // USED only to display items in barcode db
         public Task<List<Barcode>> GetInfoAsync()
         {
             return _database.Table<Barcode>().ToListAsync();
         }
 
-        public Task<int> DeletePersonAsync(UserData userData)
-        {
-            return _database.DeleteAsync(userData);
-        }
-
-
+        // USED - delete a custom list
         public Task<int> DeleteListAsync(UserList userList)
         {
+            _database.Table<UserListDetailed>().DeleteAsync(item => item.listID == userList.listID);
             return _database.DeleteAsync(userList);
         }
 
+        // USED - delete item from user specific list
         public Task<int> DeleteListDetailedAsync(UserListDetailed userListDetailed)
         {
             return _database.DeleteAsync(userListDetailed);

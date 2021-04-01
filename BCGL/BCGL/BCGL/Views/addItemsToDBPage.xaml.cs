@@ -24,9 +24,10 @@ namespace BCGL.Views
 
         async void OnButtonClicked(object sender, EventArgs e)
         {
-            if (!string.IsNullOrWhiteSpace(productNameEntry.Text))
+            if (!string.IsNullOrWhiteSpace(productNameEntry.Text) && !string.IsNullOrWhiteSpace(skuEntry.Text))
             {
                 productNameEntry.Text = string.Empty;
+                skuEntry.Text = string.Empty;
                 collectionView.ItemsSource = await App.Database.GetInfoAsync();
             }
         }

@@ -6,7 +6,7 @@ namespace BCGL.ViewModels
 {
     public class addItemsToDBModel : BaseViewModel
     {
-        private int sku;
+        private string sku;
         private string productName;
         private decimal price;
 
@@ -19,12 +19,12 @@ namespace BCGL.ViewModels
 
         private bool ValidateSave()
         {
-            return !String.IsNullOrWhiteSpace(sku.ToString())
+            return !String.IsNullOrWhiteSpace(sku)
                 && !String.IsNullOrWhiteSpace(productName)
                 && !String.IsNullOrWhiteSpace(price.ToString());
         }
 
-        public int SKU
+        public string SKU
         {
             get => sku;
             set => SetProperty(ref sku, value);

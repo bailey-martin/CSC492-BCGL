@@ -7,7 +7,8 @@
         <StackLayout>
 
             <Label x:Name="scanResultText" />
-            <zxing:ZXingScannerView IsScanning="True"
+            <zxing:ZXingScannerView x:Name="scannerView"
+                                    IsScanning="True"
                                     OnScanResult="ZXingScannerView_OnScanResult"/>
 
         </StackLayout>
