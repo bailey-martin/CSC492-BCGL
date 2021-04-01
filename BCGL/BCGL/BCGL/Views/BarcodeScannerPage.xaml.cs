@@ -16,7 +16,6 @@ namespace BCGL.Views
         public BarcodeScannerPage()
         {
             InitializeComponent();
-           
         }
 
         private void ZXingScannerView_OnScanResult(ZXing.Result result)

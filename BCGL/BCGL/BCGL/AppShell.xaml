@@ -30,7 +30,6 @@
     </Shell.Resources>
 
     <TabBar>
-        <!--<ShellContent Title="Browse" Icon="icon_feed.png" Route="ItemsPage" ContentTemplate="{DataTemplate local:ItemsPage}" />-->
         <ShellContent Title="LoginPage" Icon="icon_about.png" Route="LoginPage" ContentTemplate="{DataTemplate local:LoginPage}" />
         <ShellContent Title="About" Icon="icon_about.png" Route="AboutPage" ContentTemplate="{DataTemplate local:AboutPage}" />
         <ShellContent Title="Add Items" Icon="icon_feed.png" Route="addItemsToDBPage" ContentTemplate="{DataTemplate local:addItemsToDBPage}" />
@@ -46,9 +45,6 @@
     <!--
     <TabBar>
         <ShellContent Route="LoginPage" Icon="icon_about.png" ContentTemplate="{DataTemplate local:LoginPage}" />
-        <ShellContent Title="About" Icon="icon_about.png" Route="AboutPage" ContentTemplate="{DataTemplate local:AboutPage}" />
-        <ShellContent Title="Browse" Icon="icon_feed.png" ContentTemplate="{DataTemplate local:ItemsPage}" />
-        <ShellContent Title="Scanner" Icon="icon_feed.png" ContentTemplate="{DataTemplate local:ItemDetailPage}" />
     </TabBar>
     -->
 

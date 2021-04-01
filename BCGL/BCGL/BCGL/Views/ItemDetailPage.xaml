@@ -7,7 +7,7 @@
     <StackLayout Spacing="20" Padding="15">
         <SearchBar x:Name="searchTextField" TextChanged="OnTextChanged" Placeholder="Enter product SKU here"></SearchBar>
         <ScrollView>
-                <CollectionView x:Name="searchResults">
+                <CollectionView x:Name="searchResults" HeightRequest="100">
                     <CollectionView.ItemTemplate>
                         <DataTemplate>
                             <StackLayout>

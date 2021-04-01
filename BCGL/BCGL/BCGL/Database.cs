@@ -49,21 +49,21 @@ namespace BCGL
         // Only used on itemSearchPage
         public Task<List<Barcode>> GetBarcodesAsync(string barcodeNumber)
         {
-            Console.WriteLine("Received barcode: " + barcodeNumber);
-            return _database.Table<Barcode>().Where(items => items.SKU == barcodeNumber).ToListAsync();
+
+            return _database.QueryAsync<Barcode>("Select * FROM Barcode WHERE ProductName LIKE ? OR SKU LIKE ?", "%" + barcodeNumber + "%", "%" + barcodeNumber + "%");
+            //return _database.Table<Barcode>().Where(items => items.SKU == barcodeNumber).ToListAsync();
         }
 
         // Used - retrive barcode object from sku
         public Task<Barcode> GetBarcodeAsync(string barcodeNumber)
         {
-            Console.WriteLine("Received barcode: " + barcodeNumber);
             return _database.Table<Barcode>().Where(items => items.SKU == barcodeNumber).FirstOrDefaultAsync();
         }
 
         // USED - display all record that match a product name
         public Task<List<Barcode>> GetBarcodesNameAsync(string productName)
         {
-            return _database.Table<Barcode>().Where(items => items.ProductName.ToLower() == productName.ToLower()).ToListAsync();
+            return _database.QueryAsync<Barcode>("Select * FROM Barcode WHERE ProductName LIKE ?", "%" + productName + "%");
         }
 
         // USED - local copy of userdata to bind lists to

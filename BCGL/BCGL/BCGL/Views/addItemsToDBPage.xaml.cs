@@ -14,6 +14,7 @@ namespace BCGL.Views
         {
             InitializeComponent();
             BindingContext = _viewModel = new addItemsToDBModel();
+
         }
 
         protected override async void OnAppearing()
@@ -24,10 +25,11 @@ namespace BCGL.Views
 
         async void OnButtonClicked(object sender, EventArgs e)
         {
-            if (!string.IsNullOrWhiteSpace(productNameEntry.Text) && !string.IsNullOrWhiteSpace(skuEntry.Text))
+            if (!string.IsNullOrWhiteSpace(productNameEntry.Text) && !string.IsNullOrWhiteSpace(skuEntry.Text) && !string.IsNullOrEmpty(priceEntry.Text))
             {
                 productNameEntry.Text = string.Empty;
                 skuEntry.Text = string.Empty;
+                priceEntry.Text = string.Empty;
                 collectionView.ItemsSource = await App.Database.GetInfoAsync();
             }
         }

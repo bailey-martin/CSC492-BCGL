@@ -10,28 +10,32 @@
     <ContentPage.Content>
         <StackLayout>
             <Label Text="SKU:" FontSize="Medium" />
-            <Entry Text="{Binding SKU, Mode=TwoWay}" FontSize="Medium" x:Name="skuEntry" Keyboard="Numeric"/>
+            <Entry Text="{Binding SKU, Mode=TwoWay}" FontSize="Medium" x:Name="skuEntry" Keyboard="Numeric" MaxLength="12"/>
             <Label Text="ProductName" FontSize="Medium" />
-            <Editor Text="{Binding ProductName, Mode=TwoWay}" AutoSize="TextChanges" FontSize="Medium" Margin="0" x:Name="productNameEntry" />
+            <Editor Text="{Binding ProductName, Mode=TwoWay}" AutoSize="TextChanges" FontSize="Medium" Margin="0" x:Name="productNameEntry"/>
             <Label Text="Price" FontSize="Medium" />
             <Editor Text="{Binding Price, Mode=TwoWay}" AutoSize="TextChanges" FontSize="Medium" Margin="0" x:Name="priceEntry" Keyboard="Numeric"/>
             <StackLayout Orientation="Horizontal">
-                <Button Text="Add" Command="{Binding AddCommand}" HorizontalOptions="FillAndExpand" Clicked="OnButtonClicked"></Button>
+                <Button Text="Add" Command="{Binding AddCommand}" HorizontalOptions="FillAndExpand" Clicked="OnButtonClicked" ></Button>
             </StackLayout>
-            <CollectionView x:Name="collectionView">
-            <CollectionView.ItemTemplate>
-                <DataTemplate>
-                    <StackLayout>
-                        <Label Text="{Binding SKU}"
-                               FontSize="Medium" />
-                        <Label Text="{Binding ProductName}"
-                               FontSize="Medium" />
-                        <Label Text="{Binding Price}"
-                               FontSize="Medium" />
-                    </StackLayout>
-                </DataTemplate>
-            </CollectionView.ItemTemplate>
-        </CollectionView>
+            <ScrollView>
+                <CollectionView x:Name="collectionView">
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+                            <Frame Padding="5" HasShadow="False" BorderColor="Black">
+                                <StackLayout>
+                                    <Label Text="{Binding Path=SKU, StringFormat='SKU: {0}'}"
+                                           FontSize="Medium" />
+                                    <Label Text="{Binding Path=ProductName, StringFormat='Product: {0}'}"
+                                           FontSize="Medium" />
+                                    <Label Text="{Binding Path=Price,StringFormat='{0:C2}'}"
+                                           FontSize="Medium" />
+                                </StackLayout>
+                            </Frame>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+             </ScrollView>
          </StackLayout>
     </ContentPage.Content>
 </ContentPage>

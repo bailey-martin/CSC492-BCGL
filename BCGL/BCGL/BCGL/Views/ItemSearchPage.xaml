@@ -4,7 +4,7 @@
              x:Class="BCGL.Views.ItemSearchPage">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Search for an item manually by entering the product's SKU number:"
+            <Label Text="Search for an item manually by entering the product's SKU number or the product's name:"
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="CenterAndExpand" />
             <SearchBar x:Name="searchTextField" TextChanged="OnTextChanged" Placeholder="Enter product SKU here"></SearchBar>
