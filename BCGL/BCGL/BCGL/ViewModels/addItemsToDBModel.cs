@@ -21,16 +21,6 @@ namespace BCGL.ViewModels
 
         private bool ValidateSave()
         {
-            Console.WriteLine("ValidateSave");
-            Console.WriteLine(price);
-            Console.WriteLine(price.ToString());
-            Console.WriteLine((price.ToString()).TrimStart());
-            Console.WriteLine((price.ToString()).Length);
-            Console.WriteLine(productName);
-            Console.WriteLine(productName.Length);
-            Console.WriteLine(sku);
-            Console.WriteLine(sku.Length);
-
             return !String.IsNullOrWhiteSpace(sku)
                 && !String.IsNullOrWhiteSpace(productName)
                 && !String.IsNullOrWhiteSpace(price.ToString())
