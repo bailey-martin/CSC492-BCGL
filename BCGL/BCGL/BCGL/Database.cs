@@ -18,8 +18,8 @@ namespace BCGL
             _database = new SQLiteAsyncConnection(dbPath);
 
             //May have to comment or uncomment these 2 lines
-            _database.DeleteAllAsync<UserListDetailed>().Wait();
-            _database.DropTableAsync<UserListDetailed>().Wait();
+            //_database.DeleteAllAsync<UserListDetailed>().Wait();
+            //_database.DropTableAsync<UserListDetailed>().Wait();
             //End of may have to comment/uncomment section
             _database.DeleteAllAsync<Barcode>().Wait();
             _database.DropTableAsync<Barcode>().Wait();
