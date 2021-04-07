@@ -96,6 +96,13 @@ namespace BCGL.Views
                 record = Guid.NewGuid().ToString()
             };
         }
+        async void TapGestureRecognizer_Tapped_1(object sender, EventArgs e)
+        {
+            var selectedItemLocal = (UserListDetailed)((StackLayout)sender).BindingContext;
+            App.Database.selectedItem = selectedItemLocal;
+            await Shell.Current.GoToAsync($"{nameof(ScannerPage)}");
+            Console.WriteLine(selectedItemLocal.listContent);
+        }
     }
 }
 

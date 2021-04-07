@@ -10,8 +10,10 @@ namespace BCGL
         readonly SQLiteAsyncConnection _database;
         private string username1;
         private string result;
+        private UserListDetailed _selectedItem;
         public string username { get => username1; set => username1 = value; }
         public string scannerResult { get => result; set => result = value; }
+        public UserListDetailed selectedItem { get => _selectedItem; set => _selectedItem = value; }
 
         public Database(string dbPath)
         {

@@ -37,6 +37,11 @@
                                FontSize="Medium"
                                x:Name="listItem"/>
                         <StackLayout.GestureRecognizers>
+                                    <TapGestureRecognizer 
+                                        NumberOfTapsRequired="1"
+                                        Tapped="TapGestureRecognizer_Tapped_1"
+                                        CommandParameter="{Binding listContent}">
+                                    </TapGestureRecognizer>
                             <SwipeGestureRecognizer Direction="Left"  Swiped="OnSwiped" CommandParameter="{Binding .}"/>
                         </StackLayout.GestureRecognizers>
                     </StackLayout>

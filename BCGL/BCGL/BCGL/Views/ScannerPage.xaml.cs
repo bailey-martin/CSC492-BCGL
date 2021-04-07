@@ -17,30 +17,22 @@ namespace BCGL.Views
             InitializeComponent();
         }
 
-        async void Button_Clicked(System.Object sender, System.EventArgs e)
+        protected override void OnDisappearing()
         {
-            var result = await MediaPicker.PickPhotoAsync(new MediaPickerOptions
-            {
-                Title = "Please pick a photo"
-            });
-
-            if (result != null)
-            {
-                var stream = await result.OpenReadAsync();
-
-                resultImage.Source = ImageSource.FromStream(() => stream);
-            }
+            App.Database.selectedItem = null;
+            base.OnDisappearing();
         }
 
-        async void Button1_Clicked(System.Object sender, System.EventArgs e)
+        protected override async void OnAppearing()
         {
-            var result = await MediaPicker.CapturePhotoAsync();
-
-            if (result != null)
+            base.OnAppearing();
+            if (App.Database.selectedItem != null)
             {
-                var stream = await result.OpenReadAsync();
-
-                resultImage.Source = ImageSource.FromStream(() => stream);
+                collectionView.ItemsSource = await App.Database.GetBarcodesAsync(App.Database.selectedItem.listContent);
+            }
+            else
+            {
+                await Shell.Current.GoToAsync("..");
             }
         }
     }

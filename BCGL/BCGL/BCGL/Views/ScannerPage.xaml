@@ -4,15 +4,24 @@
              x:Class="BCGL.Views.ScannerPage">
     <ContentPage.Content>
         <StackLayout>
-            <Button Text="Pick Image"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand"
-                Clicked="Button_Clicked"/>
-            <Button Text="Capture Image"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand"
-                Clicked="Button1_Clicked"/>
-            <Image x:Name="resultImage" />
+            <ScrollView>
+                <CollectionView x:Name="collectionView">
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+                            <Frame Padding="5" HasShadow="False" BorderColor="Black">
+                                <StackLayout>
+                                    <Label Text="{Binding Path=SKU, StringFormat='SKU: {0}'}"
+                                           FontSize="Medium" />
+                                    <Label Text="{Binding Path=ProductName, StringFormat='Product: {0}'}"
+                                           FontSize="Medium" />
+                                    <Label Text="{Binding Path=Price,StringFormat='{0:C2}'}"
+                                           FontSize="Medium" />
+                                </StackLayout>
+                            </Frame>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+             </ScrollView>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
