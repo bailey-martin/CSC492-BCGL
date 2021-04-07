@@ -13,3 +13,5 @@ permalink: /documents/
 [Design Document 1](Documents/BCGLDesignDocument1.pdf)
 
 [Design Document 2](Documents/BCGLDesignDocument2.pdf)
+
+[Press Release 2](Documents/PressRelease2.pdf)
