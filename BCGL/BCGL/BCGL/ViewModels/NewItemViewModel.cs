@@ -1,8 +1,5 @@
 ﻿using BCGL.Models;
 using System;
-using System.Collections.Generic;
-using System.Text;
-using System.Windows.Input;
 using Xamarin.Forms;
 
 namespace BCGL.ViewModels
@@ -19,6 +16,7 @@ namespace BCGL.ViewModels
             CancelCommand = new Command(OnCancel);
             this.PropertyChanged +=
                 (_, __) => SaveCommand.ChangeCanExecute();
+            Title = "Add New Shopping List";
         }
 
         private bool ValidateSave()

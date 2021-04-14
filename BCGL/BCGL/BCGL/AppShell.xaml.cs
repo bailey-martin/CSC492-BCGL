@@ -1,7 +1,4 @@
-﻿using BCGL.ViewModels;
-using BCGL.Views;
-using System;
-using System.Collections.Generic;
+﻿using BCGL.Views;
 using Xamarin.Forms;
 
 namespace BCGL

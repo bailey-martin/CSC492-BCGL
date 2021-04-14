@@ -1,14 +1,5 @@
-﻿using BCGL.Models;
-using BCGL.ViewModels;
-using BCGL.Views;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using BCGL.ViewModels;
 using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
 
 namespace BCGL.Views
 {

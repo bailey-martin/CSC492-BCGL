@@ -1,11 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace BCGL.ViewModels
+﻿namespace BCGL.ViewModels
 {
-    class ScannerPageViewModel
+    public class ScannerPageViewModel : BaseViewModel
     {
-
+        public ScannerPageViewModel()
+        {
+            Title = "Product Detail";
+        }
     }
 }

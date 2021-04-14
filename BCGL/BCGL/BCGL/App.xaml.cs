@@ -1,10 +1,7 @@
 ﻿using BCGL.Services;
-using BCGL.Views;
 using System;
 using System.IO;
-using System.Threading.Tasks;
 using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
 
 namespace BCGL
 {
@@ -30,43 +27,24 @@ namespace BCGL
 
             //DependencyService.Register<MockDataStore>();
             ///**
+            // Debug Purposes
             // * Get DB Path
-            Console.WriteLine("################");
-            Console.WriteLine("################");
-            Console.WriteLine("################");
-            Console.WriteLine(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData)));
+            //Console.WriteLine("################");
+            //Console.WriteLine("################");
+            //Console.WriteLine("################");
+            //Console.WriteLine(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData)));
             //*/
             DependencyService.Register<MockDataStore>();
             MainPage = new AppShell();
-            //MainPage = new NavigationPage(new LoginPage());
         }
-
-        /*
-        Task InitNavigation()
-        {
-            var navService = PageModelLocator.Resolve<INavigationService>();
-            return navService.NavigateToAsync<LoginPageModel>();
-        }
-        */
 
         protected override async void OnStart()
         {
             await Shell.Current.GoToAsync("//LoginPage");
         }
 
-        /*
-        protected override async void OnStart()
-        {
-            await InitNavigation();
-        }
-        */
+        protected override void OnSleep() {}
 
-        protected override void OnSleep()
-        {
-        }
-
-        protected override void OnResume()
-        {
-        }
+        protected override void OnResume() {}
     }
 }

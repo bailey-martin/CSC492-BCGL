@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Xamarin.Essentials;
+﻿using BCGL.ViewModels;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -15,6 +10,7 @@ namespace BCGL.Views
         public ScannerPage()
         {
             InitializeComponent();
+            this.BindingContext = new ScannerPageViewModel();
         }
 
         protected override void OnDisappearing()

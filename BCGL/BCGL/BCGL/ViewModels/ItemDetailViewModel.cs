@@ -1,7 +1,5 @@
-﻿using BCGL.Models;
-using System;
+﻿using System;
 using System.Diagnostics;
-using System.Threading.Tasks;
 using Xamarin.Forms;
 
 namespace BCGL.ViewModels
@@ -13,6 +11,11 @@ namespace BCGL.ViewModels
         private string text;
         private string description;
         public string Id { get; set; }
+
+        public ItemDetailViewModel()
+        {
+            Title = "Shopping List";
+        }
 
         public string Text
         {

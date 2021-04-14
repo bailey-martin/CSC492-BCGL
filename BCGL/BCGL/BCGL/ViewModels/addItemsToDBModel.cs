@@ -1,5 +1,4 @@
 ﻿using System;
-using BCGL.Models;
 using Xamarin.Forms;
 
 namespace BCGL.ViewModels
@@ -17,6 +16,7 @@ namespace BCGL.ViewModels
             AddCommand = new Command(OnAdd, ValidateSave);
             this.PropertyChanged +=
                 (_, __) => AddCommand.ChangeCanExecute();
+            Title = "Add Products to System";
         }
 
         private bool ValidateSave()

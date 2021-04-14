@@ -2,7 +2,6 @@
 using BCGL.Views;
 using System;
 using System.Collections.ObjectModel;
-using System.ComponentModel;
 using System.Diagnostics;
 using System.Threading.Tasks;
 using Xamarin.Forms;
@@ -23,7 +22,7 @@ namespace BCGL.ViewModels
 
         public ItemsViewModel()
         {
-            Title = "Browse";
+            Title = "My Lists";
             Items = new ObservableCollection<Item>();
             LoadItemsCommand = new Command(async () => await ExecuteLoadItemsCommand());
 
@@ -106,50 +105,20 @@ namespace BCGL.ViewModels
             if (item == null)
                 return;
 
-            Console.WriteLine("Left");
-            //bool answer = await App.Current.MainPage.DisplayAlert("Question?", "Are You sure you want to Edit the item: " + item.Text + "?", "Yes", "No");
-            //if (answer)
-            //{
-            //    // Go to new Screen
-            //    string titleChange = await App.Current.MainPage.DisplayPromptAsync("Change list title:", "Change list title", "OK", "Cancel", item.Text);
-            //    string descriptionChange = await App.Current.MainPage.DisplayPromptAsync("Change list description:", "Change list description", "OK", "Cancel", item.Description);
-            //    if (string.IsNullOrEmpty(titleChange) || string.IsNullOrWhiteSpace(titleChange))
-            //    {
-            //        titleChange = item.Text;
-            //    }
-            //    if (string.IsNullOrEmpty(descriptionChange) || string.IsNullOrWhiteSpace(descriptionChange))
-            //    {
-            //        descriptionChange = item.Description;
-            //    }
-            //    item.Text = titleChange;
-            //    item.Description = descriptionChange;
-
-            //    await DataStore.UpdateItemAsync(item);
-            //    await App.Database.UpdateListAsync(new UserList
-            //    {
-            //        listID = item.Id,
-            //        username = App.Database.username,
-            //        text = item.Text,
-            //        description = item.Description
-            //    });
-            //    Items.Remove(item);
-            //    Items.Add(item);
-            //}
-
-            bool changeTitle = await App.Current.MainPage.DisplayAlert("Question?", "Do you want to edit the item title: " + item.Text + "?", "Yes", "No");
+            bool changeTitle = await App.Current.MainPage.DisplayAlert("Confirm:", "Do you want to edit the item title: " + item.Text + "?", "Yes", "No");
             if (changeTitle)
             {
-                string titleChange = await App.Current.MainPage.DisplayPromptAsync("Change list title:", "Change list title", "OK", "Cancel", item.Text);
+                string titleChange = await App.Current.MainPage.DisplayPromptAsync("Confirm:", "Change list title", "OK", "Cancel", item.Text);
                 if (string.IsNullOrEmpty(titleChange) || string.IsNullOrWhiteSpace(titleChange))
                 {
                     titleChange = item.Text;
                 }
                 item.Text = titleChange;
             }
-            bool changedescription = await App.Current.MainPage.DisplayAlert("Question?", "Do you want to edit the item description: " + item.Description + "?", "Yes", "No");
+            bool changedescription = await App.Current.MainPage.DisplayAlert("Confirm:", "Do you want to edit the item description: " + item.Description + "?", "Yes", "No");
             if (changedescription)
             {
-                string descriptionChange = await App.Current.MainPage.DisplayPromptAsync("Change list description:", "Change list description", "OK", "Cancel", item.Description);
+                string descriptionChange = await App.Current.MainPage.DisplayPromptAsync("Confirm:", "Change list description", "OK", "Cancel", item.Description);
                 if (string.IsNullOrEmpty(descriptionChange) || string.IsNullOrWhiteSpace(descriptionChange))
                 {
                     descriptionChange = item.Description;
@@ -173,7 +142,7 @@ namespace BCGL.ViewModels
             if (item == null)
                 return;
 
-            bool answer = await App.Current.MainPage.DisplayAlert("Question?", "Are You sure you want to Delete the item: "+item.Text+"?", "Yes", "No");
+            bool answer = await App.Current.MainPage.DisplayAlert("Confirm:", "Are You sure you want to Delete the item: "+item.Text+"?", "Yes", "No");
             if (answer)
             {
                 await DataStore.DeleteItemAsync(item.Id);

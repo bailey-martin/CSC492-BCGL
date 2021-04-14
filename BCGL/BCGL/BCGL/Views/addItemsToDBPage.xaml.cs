@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using BCGL.Models;
 using BCGL.ViewModels;
 using Xamarin.Forms;
 
@@ -14,7 +12,6 @@ namespace BCGL.Views
         {
             InitializeComponent();
             BindingContext = _viewModel = new addItemsToDBModel();
-
         }
 
         protected override async void OnAppearing()

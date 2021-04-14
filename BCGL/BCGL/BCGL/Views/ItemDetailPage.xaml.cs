@@ -1,6 +1,5 @@
 ﻿using BCGL.ViewModels;
 using System;
-using System.ComponentModel;
 using Xamarin.Forms;
 
 namespace BCGL.Views
@@ -58,7 +57,7 @@ namespace BCGL.Views
                 case SwipeDirection.Left:
                     // Handle the swipe
                     UserListDetailed item = (UserListDetailed)e.Parameter;
-                    bool answer = await DisplayAlert("Question?","Are your sure you want to delete this item: "+ item.listContent, "Yes","No");
+                    bool answer = await DisplayAlert("Confirm:","Are your sure you want to delete this item: "+ item.listContent, "Yes","No");
                     if (answer)
                     {
                         await App.Database.DeleteListDetailedAsync(new UserListDetailed
@@ -76,7 +75,9 @@ namespace BCGL.Views
         public async void searchFunction(string searchTarget)
         {
             if (!string.IsNullOrWhiteSpace(searchTarget))
-            { searchResults.ItemsSource = await App.Database.GetBarcodesNameAsync(searchTarget); }
+            {
+                searchResults.ItemsSource = await App.Database.GetBarcodesNameAsync(searchTarget);
+            }
             else { searchResults.ItemsSource = ""; }
         }
 
@@ -101,7 +102,6 @@ namespace BCGL.Views
             var selectedItemLocal = (UserListDetailed)((StackLayout)sender).BindingContext;
             App.Database.selectedItem = selectedItemLocal;
             await Shell.Current.GoToAsync($"{nameof(ScannerPage)}");
-            Console.WriteLine(selectedItemLocal.listContent);
         }
     }
 }

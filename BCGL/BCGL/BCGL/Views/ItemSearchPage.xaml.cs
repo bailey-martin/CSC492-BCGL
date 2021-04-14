@@ -1,10 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using SQLite;
-using BCGL.ViewModels;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -27,8 +21,14 @@ namespace BCGL.Views
 
         public async void searchFunction(string searchTarget)
         {
-            if (string.IsNullOrWhiteSpace(searchTarget)) { collectionView.ItemsSource = await App.Database.GetBarcodesAllAsync(); }
-            else { collectionView.ItemsSource = await App.Database.GetBarcodesAsync(searchTarget); }
+            if (string.IsNullOrWhiteSpace(searchTarget))
+            {
+                collectionView.ItemsSource = await App.Database.GetBarcodesAllAsync();
+            }
+            else
+            {
+                collectionView.ItemsSource = await App.Database.GetBarcodesAsync(searchTarget);
+            }
         }
 
         void OnTextChanged(object sender, EventArgs e)

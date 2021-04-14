@@ -1,9 +1,5 @@
 ﻿using BCGL.ViewModels;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using System.ComponentModel;
@@ -26,8 +22,6 @@ namespace BCGL.Views
             Shell.SetTabBarIsVisible(this, false);
         }
 
-        
-
         async void LoginClicked(object sender, EventArgs e)
         {
             String Token = "";
@@ -48,7 +42,6 @@ namespace BCGL.Views
                 }
                 else 
                 {
-                    
                     ShowError();
                 }
                 
@@ -58,13 +51,11 @@ namespace BCGL.Views
                 Console.WriteLine(err);
                 ShowError();
             }
-            
         }
 
         async private void ShowError()
         {
             await DisplayAlert("Authentication Failed", "E-mail or password are incorrect. Try again!", "OK");
-            //Console.WriteLine("LLLL");
         }
     }
 }
