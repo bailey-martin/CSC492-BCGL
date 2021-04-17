@@ -1,4 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<!--ItemsPage.xaml
+  Property of RAID Inc. (Andrew Moore, Bailey Martin, Kyle Hieb)
+  University of Mount Union CSC 492
+  Spring 2021 Semester
+  Contact Information: raidincsoftware@gmail.com
+  Class Description: The ItemsPage class contains the UI elements, layout, and overall design for the BCGL app's "shopping list" page.
+-->
+
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="BCGL.Views.ItemsPage"
@@ -33,8 +42,10 @@
                             <SwipeGestureRecognizer Direction="Left"
                                                     Command="{Binding Source={RelativeSource AncestorType={x:Type local:ItemsViewModel}}, Path=ItemSwipedLeft }"
                                                     CommandParameter="{Binding .}"/>
+                            <!-- mapping for a left swipe gesture -->
                             <SwipeGestureRecognizer Direction="Right" Command="{Binding Source={RelativeSource AncestorType={x:Type local:ItemsViewModel}}, Path=ItemSwipedRight }"
                                                     CommandParameter="{Binding .}"/>
+                            <!-- mapping for a right swipe gesture -->
                             <TapGestureRecognizer 
                                 NumberOfTapsRequired="1"
                                 Command="{Binding Source={RelativeSource AncestorType={x:Type local:ItemsViewModel}}, Path=ItemTapped}"		

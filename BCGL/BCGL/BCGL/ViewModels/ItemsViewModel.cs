@@ -1,4 +1,13 @@
-﻿using BCGL.Models;
+﻿/*ItemsViewModel.cs
+  Property of RAID Inc. (Andrew Moore, Bailey Martin, Kyle Hieb)
+  University of Mount Union CSC 492
+  Spring 2021 Semester
+  Contact Information: raidincsoftware@gmail.com
+  Class Description: The ItemViewModel class is the engine used for products within the BCGL app. This class provides functionality for swipe gestures and programs the app's response to user
+      input.
+*/
+
+using BCGL.Models;
 using BCGL.Views;
 using System;
 using System.Collections.ObjectModel;
@@ -22,11 +31,11 @@ namespace BCGL.ViewModels
 
         public ItemsViewModel()
         {
-            Title = "My Lists";
+            Title = "My Lists";  //UI element
             Items = new ObservableCollection<Item>();
             LoadItemsCommand = new Command(async () => await ExecuteLoadItemsCommand());
 
-            ItemTapped = new Command<Item>(OnItemSelected);
+            ItemTapped = new Command<Item>(OnItemSelected);  //gestures
             ItemSwipedLeft = new Command<Item>(OnSwipedLeft);
             ItemSwipedRight = new Command<Item>(OnSwipedRight);
 
@@ -87,7 +96,7 @@ namespace BCGL.ViewModels
 
         private async void OnAddItem(object obj)
         {
-            await Shell.Current.GoToAsync(nameof(NewItemPage));
+            await Shell.Current.GoToAsync(nameof(NewItemPage)); //move UI to New Item Page
         }
 
 
@@ -97,7 +106,7 @@ namespace BCGL.ViewModels
                 return;
 
             // This will push the ItemDetailPage onto the navigation stack
-            await Shell.Current.GoToAsync($"{nameof(ItemDetailPage)}?{nameof(ItemDetailViewModel.ItemId)}={item.Id}");
+            await Shell.Current.GoToAsync($"{nameof(ItemDetailPage)}?{nameof(ItemDetailViewModel.ItemId)}={item.Id}"); //display the Detailed View page for an item
         }
 
         async void OnSwipedLeft(Item item)
@@ -105,20 +114,20 @@ namespace BCGL.ViewModels
             if (item == null)
                 return;
 
-            bool changeTitle = await App.Current.MainPage.DisplayAlert("Confirm:", "Do you want to edit the item title: " + item.Text + "?", "Yes", "No");
+            bool changeTitle = await App.Current.MainPage.DisplayAlert("Confirm:", "Do you want to edit the item title: " + item.Text + "?", "Yes", "No"); //edit title of item
             if (changeTitle)
             {
-                string titleChange = await App.Current.MainPage.DisplayPromptAsync("Confirm:", "Change list title", "OK", "Cancel", item.Text);
+                string titleChange = await App.Current.MainPage.DisplayPromptAsync("Confirm:", "Change list title", "OK", "Cancel", item.Text); //edit list title
                 if (string.IsNullOrEmpty(titleChange) || string.IsNullOrWhiteSpace(titleChange))
                 {
                     titleChange = item.Text;
                 }
                 item.Text = titleChange;
             }
-            bool changedescription = await App.Current.MainPage.DisplayAlert("Confirm:", "Do you want to edit the item description: " + item.Description + "?", "Yes", "No");
+            bool changedescription = await App.Current.MainPage.DisplayAlert("Confirm:", "Do you want to edit the item description: " + item.Description + "?", "Yes", "No"); //edit item description
             if (changedescription)
             {
-                string descriptionChange = await App.Current.MainPage.DisplayPromptAsync("Confirm:", "Change list description", "OK", "Cancel", item.Description);
+                string descriptionChange = await App.Current.MainPage.DisplayPromptAsync("Confirm:", "Change list description", "OK", "Cancel", item.Description);  //edit list description
                 if (string.IsNullOrEmpty(descriptionChange) || string.IsNullOrWhiteSpace(descriptionChange))
                 {
                     descriptionChange = item.Description;
@@ -126,7 +135,7 @@ namespace BCGL.ViewModels
                 item.Description = descriptionChange;
             }
             DataStore.UpdateItemAsync(item).Wait();
-            await App.Database.UpdateListAsync(new UserList
+            await App.Database.UpdateListAsync(new UserList //sync the app database
             {
                 listID = item.Id,
                 username = App.Database.username,
@@ -134,7 +143,7 @@ namespace BCGL.ViewModels
                 description = item.Description
             });
             Items.Remove(item);
-            Items.Add(item);
+            Items.Add(item); //reload of the list items
         }
 
         async void OnSwipedRight(Item item)
@@ -142,11 +151,11 @@ namespace BCGL.ViewModels
             if (item == null)
                 return;
 
-            bool answer = await App.Current.MainPage.DisplayAlert("Confirm:", "Are You sure you want to Delete the item: "+item.Text+"?", "Yes", "No");
+            bool answer = await App.Current.MainPage.DisplayAlert("Confirm:", "Are You sure you want to Delete the item: "+item.Text+"?", "Yes", "No"); //allows you to swipe right to delete an item from your list
             if (answer)
             {
                 await DataStore.DeleteItemAsync(item.Id);
-                await App.Database.DeleteListAsync(new UserList
+                await App.Database.DeleteListAsync(new UserList //sync the app database
                 {
                     listID = item.Id,
                     username = App.Database.username,

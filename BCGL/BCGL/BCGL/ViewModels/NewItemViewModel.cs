@@ -1,4 +1,12 @@
-﻿using BCGL.Models;
+﻿/*NewItemViewModel.cs
+  Property of RAID Inc. (Andrew Moore, Bailey Martin, Kyle Hieb)
+  University of Mount Union CSC 492
+  Spring 2021 Semester
+  Contact Information: raidincsoftware@gmail.com
+  Class Description: The NewItemViewModel class provides the functionality for UI elements on the app's "New Item" page.
+*/
+
+using BCGL.Models;
 using System;
 using Xamarin.Forms;
 
@@ -16,13 +24,13 @@ namespace BCGL.ViewModels
             CancelCommand = new Command(OnCancel);
             this.PropertyChanged +=
                 (_, __) => SaveCommand.ChangeCanExecute();
-            Title = "Add New Shopping List";
+            Title = "Add New Shopping List"; //displayed on the UI
         }
 
         private bool ValidateSave()
         {
             return !String.IsNullOrWhiteSpace(text)
-                && !String.IsNullOrWhiteSpace(description);
+                && !String.IsNullOrWhiteSpace(description); //checks to make sure the new item is valid
         }
 
         public string Text
@@ -49,20 +57,20 @@ namespace BCGL.ViewModels
         private async void OnCancel()
         {
             // This will pop the current page off the navigation stack
-            await Shell.Current.GoToAsync("..");
+            await Shell.Current.GoToAsync(".."); //return to the previous page
         }
 
         private async void OnSave()
         {
-            Item newItem = new Item()
+            Item newItem = new Item() //creation of a new Item object
             {
                 Id = Guid.NewGuid().ToString(),
                 Text = Text,
                 Description = Description
             };
 
-            await DataStore.AddItemAsync(newItem);
-            await App.Database.SaveListAsync(new UserList
+            await DataStore.AddItemAsync(newItem); //sync the database
+            await App.Database.SaveListAsync(new UserList //save to the database
             {
                 listID = newItem.Id,
                 username = App.Database.username,
@@ -71,7 +79,7 @@ namespace BCGL.ViewModels
             });
 
             // This will pop the current page off the navigation stack
-            await Shell.Current.GoToAsync("..");
+            await Shell.Current.GoToAsync(".."); //after save, you will return to the previous page in the app
         }
     }
 }

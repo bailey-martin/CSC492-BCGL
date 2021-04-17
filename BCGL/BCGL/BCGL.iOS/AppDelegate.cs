@@ -1,4 +1,12 @@
-﻿using System;
+﻿/*AppDelegate.cs
+  Property of RAID Inc. (Andrew Moore, Bailey Martin, Kyle Hieb)
+  University of Mount Union CSC 492
+  Spring 2021 Semester
+  Contact Information: raidincsoftware@gmail.com
+  Class Description: This class was generated automatically by Visual Studio 2019 to support the application.
+*/
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -25,12 +33,12 @@ namespace BCGL.iOS
             global::Xamarin.Forms.Forms.SetFlags("CollectionView_Experimental");
             global::Xamarin.Forms.Forms.Init();
 
-            //Barcode Scan NuGet Addition
+            //Barcode Scan NuGet Addition (allows for the camera barcode scanning functionality to function properly)
             ZXing.Net.Mobile.Forms.iOS.Platform.Init();
             //End of Barcode Scan NuGet Addition
             LoadApplication(new App());
 
-            //Firebase Addition
+            //Firebase Addition (allows for the Firebase login/authentication mechanism to function properly)
             Firebase.Core.App.Configure();
             //End of Firebase Addition
 

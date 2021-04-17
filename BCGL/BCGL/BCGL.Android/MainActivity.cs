@@ -1,4 +1,12 @@
-﻿using System;
+﻿/*MainActivity.cs
+  Property of RAID Inc. (Andrew Moore, Bailey Martin, Kyle Hieb)
+  University of Mount Union CSC 492
+  Spring 2021 Semester
+  Contact Information: raidincsoftware@gmail.com
+  Class Description: This class was generated automatically by Visual Studio 2019 to support the application.
+*/
+
+using System;
 
 using Android.App;
 using Android.Content.PM;
@@ -22,7 +30,7 @@ namespace BCGL.Droid
             Xamarin.Essentials.Platform.Init(this, savedInstanceState);
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
 
-            //Barcode Scan NuGet Addition
+            //Barcode Scan NuGet Addition (allows for the camera barcode scanning functionality to function properly)
             ZXing.Net.Mobile.Forms.Android.Platform.Init();
             //End of Barcode Scan NuGet Addition
 
@@ -32,7 +40,7 @@ namespace BCGL.Droid
         {
             Xamarin.Essentials.Platform.OnRequestPermissionsResult(requestCode, permissions, grantResults);
 
-            //Barcode Scan NuGet Addition
+            //Barcode Scan NuGet Addition (allows for the camera barcode scanning functionality to function properly) (requests appropriate [camera] permissions from the user
             global::ZXing.Net.Mobile.Android.PermissionsHandler.OnRequestPermissionsResult(requestCode, permissions, grantResults);
             //End of Barcode Scan NuGet Addition
 

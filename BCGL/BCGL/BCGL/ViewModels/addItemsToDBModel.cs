@@ -1,4 +1,12 @@
-﻿using System;
+﻿/*addItemsToDBModel.cs
+  Property of RAID Inc. (Andrew Moore, Bailey Martin, Kyle Hieb)
+  University of Mount Union CSC 492
+  Spring 2021 Semester
+  Contact Information: raidincsoftware@gmail.com
+  Class Description: This class is designed to assist in the process of adding product items to the app database. Every item contains a SKU, product name, and price.
+*/
+
+using System;
 using Xamarin.Forms;
 
 namespace BCGL.ViewModels
@@ -25,8 +33,8 @@ namespace BCGL.ViewModels
                 && !String.IsNullOrWhiteSpace(productName)
                 && !String.IsNullOrWhiteSpace(price.ToString())
                 && !String.IsNullOrEmpty(price.ToString())
-                && double.Parse(price.ToString()) > 0
-                && sku.Length == 12;
+                && double.Parse(price.ToString()) > 0 //ensures price is valid
+                && sku.Length == 12; //checks to ensure that the SKU number is 12 characters long (this is a universal rule/format)
         }
 
         public string SKU
@@ -51,7 +59,7 @@ namespace BCGL.ViewModels
 
         private async void OnAdd()
         {
-            await App.Database.SaveInfoAsync(new Barcode
+            await App.Database.SaveInfoAsync(new Barcode //saves the item into the app's database when the user presses the Add button
             {
                 SKU = SKU,
                 ProductName = ProductName,
@@ -62,4 +70,3 @@ namespace BCGL.ViewModels
 
     }
 }
-

@@ -1,4 +1,13 @@
-﻿using System.Collections.Generic;
+﻿/*Database.cs
+  Property of RAID Inc. (Andrew Moore, Bailey Martin, Kyle Hieb)
+  University of Mount Union CSC 492
+  Spring 2021 Semester
+  Contact Information: raidincsoftware@gmail.com
+  Class Description: This class powers the SQLite database that is used to store products. This database is the foundation of the entire application. This class also contains 50 items that are added to
+    the database and that come by default with the application. Users can always add additional items to this product database if they would like.
+*/
+
+using System.Collections.Generic;
 using System.Threading.Tasks;
 using SQLite;
 
@@ -26,7 +35,7 @@ namespace BCGL
             //_database.DeleteAllAsync<Barcode>().Wait();
             //_database.DropTableAsync<Barcode>().Wait();
 
-            _database.CreateTableAsync<Barcode>().Wait();
+            _database.CreateTableAsync<Barcode>().Wait(); //table creation
             _database.CreateTableAsync<UserData>().Wait();
             _database.CreateTableAsync<UserList>().Wait();
             _database.CreateTableAsync<UserListDetailed>().Wait();
@@ -51,7 +60,7 @@ namespace BCGL
 
         public Task<List<Barcode>> GetBarcodesAsync(string barcodeNumber)
         {
-            return _database.QueryAsync<Barcode>("Select * FROM Barcode WHERE ProductName LIKE ? OR SKU LIKE ?", "%" + barcodeNumber + "%", "%" + barcodeNumber + "%");
+            return _database.QueryAsync<Barcode>("Select * FROM Barcode WHERE ProductName LIKE ? OR SKU LIKE ?", "%" + barcodeNumber + "%", "%" + barcodeNumber + "%"); //SQLite query
         }
 
         public Task<Barcode> GetBarcodeAsync(string barcodeNumber)
@@ -61,7 +70,7 @@ namespace BCGL
 
         public Task<List<Barcode>> GetBarcodesNameAsync(string productName)
         {
-            return _database.QueryAsync<Barcode>("Select * FROM Barcode WHERE ProductName LIKE ?", "%" + productName + "%");
+            return _database.QueryAsync<Barcode>("Select * FROM Barcode WHERE ProductName LIKE ?", "%" + productName + "%"); //SQLite query
         }
 
         public Task<int> SavePersonAsync(UserData userData)
@@ -105,7 +114,7 @@ namespace BCGL
             return _database.DeleteAsync(userListDetailed);
         }
 
-        private Task<int> populateBarcodeTable()
+        private Task<int> populateBarcodeTable() //products that are already added into the database by default (users can always add additional products to this list)
         {
             _database.InsertOrReplaceAsync(new Barcode { SKU = "16571910303", ProductName = "Sparkling Ice Water - Black Raspberry", Price = 1 });
             _database.InsertOrReplaceAsync(new Barcode { SKU = "85227617524", ProductName = "#10 Envelopes - 40 count", Price = 1.64 });

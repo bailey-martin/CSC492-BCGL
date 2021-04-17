@@ -1,4 +1,12 @@
-﻿using BCGL.Models;
+﻿/*BaseViewModel.cs
+  Property of RAID Inc. (Andrew Moore, Bailey Martin, Kyle Hieb)
+  University of Mount Union CSC 492
+  Spring 2021 Semester
+  Contact Information: raidincsoftware@gmail.com
+  Class Description: The BaseViewModel is designed to serve as the foundational view model that other ViewModel classes build off. It is inherited??????? in our other ViewModel classes.
+*/
+
+using BCGL.Models;
 using BCGL.Services;
 using System;
 using System.Collections.Generic;

@@ -1,4 +1,13 @@
-﻿using System;
+﻿/*ItemDetailViewModel.cs
+  Property of RAID Inc. (Andrew Moore, Bailey Martin, Kyle Hieb)
+  University of Mount Union CSC 492
+  Spring 2021 Semester
+  Contact Information: raidincsoftware@gmail.com
+  Class Description: The ItemDetailViewModel class provides the functionality for the detailed view of an item. This is called when a user selects an item on their shopping lists and wants to see more
+      information about the product.
+*/
+
+using System;
 using System.Diagnostics;
 using Xamarin.Forms;
 
@@ -14,7 +23,7 @@ namespace BCGL.ViewModels
 
         public ItemDetailViewModel()
         {
-            Title = "Shopping List";
+            Title = "Shopping List"; //UI element
         }
 
         public string Text
@@ -38,7 +47,7 @@ namespace BCGL.ViewModels
             set
             {
                 itemId = value;
-                LoadItemId(value);
+                LoadItemId(value); //loads in the item selected by the user
             }
         }
 
@@ -46,7 +55,7 @@ namespace BCGL.ViewModels
         {
             try
             {
-                var item = await DataStore.GetItemAsync(itemId);
+                var item = await DataStore.GetItemAsync(itemId); //value is passed in
                 Id = item.Id;
                 Text = item.Text;
                 Description = item.Description;

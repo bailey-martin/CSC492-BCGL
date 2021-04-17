@@ -1,4 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<!--BarcodeScannerPage.xaml
+  Property of RAID Inc. (Andrew Moore, Bailey Martin, Kyle Hieb)
+  University of Mount Union CSC 492
+  Spring 2021 Semester
+  Contact Information: raidincsoftware@gmail.com
+  Class Description: The BarcodeScannerPage class contains the UI elements, layout, and overall design for the BCGL app's "Add Items By Scanning a Barcode" page.
+-->
+
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="BCGL.Views.BarcodeScannerPage"
@@ -21,7 +30,7 @@
             <Label x:Name="scanResultText" />
             <zxing:ZXingScannerView x:Name="scannerView"
                                     IsScanning="True"
-                                    OnScanResult="ZXingScannerView_OnScanResult"/>
+                                    OnScanResult="ZXingScannerView_OnScanResult"/> <!-- used for barcode scanning functionality-->
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
