@@ -7,11 +7,11 @@ namespace BCGL.Views
     public partial class addItemsToDBPage : ContentPage
     {
 
-        addItemsToDBModel _viewModel;
+        AddItemsToDBViewModel _viewModel;
         public addItemsToDBPage()
         {
             InitializeComponent();
-            BindingContext = _viewModel = new addItemsToDBModel();
+            BindingContext = _viewModel = new AddItemsToDBViewModel();
         }
 
         protected override async void OnAppearing()

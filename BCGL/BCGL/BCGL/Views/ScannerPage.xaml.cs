@@ -10,7 +10,7 @@ namespace BCGL.Views
         public ScannerPage()
         {
             InitializeComponent();
-            this.BindingContext = new ScannerPageViewModel();
+            this.BindingContext = new ProductDetailViewModel();
         }
 
         protected override void OnDisappearing()

@@ -14,14 +14,14 @@ using Xamarin.Forms;
 namespace BCGL.ViewModels
 {
     [QueryProperty(nameof(ItemId), nameof(ItemId))]
-    public class ItemDetailViewModel : BaseViewModel
+    public class ListDetailedViewModel : BaseViewModel
     {
         private string itemId;
         private string text;
         private string description;
         public string Id { get; set; }
 
-        public ItemDetailViewModel()
+        public ListDetailedViewModel()
         {
             Title = "Shopping List"; //UI element
         }

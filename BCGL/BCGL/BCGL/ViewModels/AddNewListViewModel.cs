@@ -12,13 +12,13 @@ using Xamarin.Forms;
 
 namespace BCGL.ViewModels
 {
-    public class NewItemViewModel : BaseViewModel
+    public class AddNewListViewModel : BaseViewModel
     {
         private string text;  //data associated with Items/Products
         private string description;
         private string id;
 
-        public NewItemViewModel()
+        public AddNewListViewModel()
         {
             SaveCommand = new Command(OnSave, ValidateSave);
             CancelCommand = new Command(OnCancel);

@@ -6,13 +6,13 @@ namespace BCGL.Views
 {
     public partial class ItemDetailPage : ContentPage
     {
-        ItemDetailViewModel _viewModel;
+        ListDetailedViewModel _viewModel;
         UserListDetailed listItem;
 
         public ItemDetailPage()
         {
             InitializeComponent();
-            BindingContext = _viewModel = new ItemDetailViewModel();
+            BindingContext = _viewModel = new ListDetailedViewModel();
         }
 
         protected override async void OnAppearing()

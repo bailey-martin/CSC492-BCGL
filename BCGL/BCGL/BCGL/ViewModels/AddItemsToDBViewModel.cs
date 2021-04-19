@@ -11,13 +11,13 @@ using Xamarin.Forms;
 
 namespace BCGL.ViewModels
 {
-    public class addItemsToDBModel : BaseViewModel
+    public class AddItemsToDBViewModel : BaseViewModel
     {
         private string sku;
         private string productName;  //product information
         private double price;
 
-        public addItemsToDBModel()
+        public AddItemsToDBViewModel()
         {
             sku = "";
             productName = "";

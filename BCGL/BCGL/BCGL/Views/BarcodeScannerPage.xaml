@@ -16,7 +16,7 @@
              Title="{Binding Title}">
     
     <ContentPage.BindingContext>
-        <vm:ScannerPageViewModel />
+        <vm:ProductDetailViewModel />
     </ContentPage.BindingContext>
     
     <ContentPage.Resources>

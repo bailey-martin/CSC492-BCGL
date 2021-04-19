@@ -17,7 +17,7 @@ using Xamarin.Forms;
 
 namespace BCGL.ViewModels
 {
-    public class ItemsViewModel : BaseViewModel
+    public class ListViewModel : BaseViewModel
     {
         private Item _selectedItem;
 
@@ -29,7 +29,7 @@ namespace BCGL.ViewModels
         public Command<Item> ItemSwipedRight { get; }
 
 
-        public ItemsViewModel()
+        public ListViewModel()
         {
             Title = "My Lists";  //UI element
             Items = new ObservableCollection<Item>();
@@ -106,7 +106,7 @@ namespace BCGL.ViewModels
                 return;
 
             // This will push the ItemDetailPage onto the navigation stack
-            await Shell.Current.GoToAsync($"{nameof(ItemDetailPage)}?{nameof(ItemDetailViewModel.ItemId)}={item.Id}"); //display the Detailed View page for an item
+            await Shell.Current.GoToAsync($"{nameof(ItemDetailPage)}?{nameof(ListDetailedViewModel.ItemId)}={item.Id}"); //display the Detailed View page for an item
         }
 
         async void OnSwipedLeft(Item item)

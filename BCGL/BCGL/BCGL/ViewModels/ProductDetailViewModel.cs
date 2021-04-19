@@ -8,9 +8,9 @@
 
 namespace BCGL.ViewModels
 {
-    public class ScannerPageViewModel : BaseViewModel
+    public class ProductDetailViewModel : BaseViewModel
     {
-        public ScannerPageViewModel()
+        public ProductDetailViewModel()
         {
             Title = "Product Detail"; //UI element
         }
