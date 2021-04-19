@@ -4,12 +4,12 @@ using Xamarin.Forms;
 
 namespace BCGL.Views
 {
-    public partial class ItemDetailPage : ContentPage
+    public partial class ListDetailedPage : ContentPage
     {
         ListDetailedViewModel _viewModel;
         UserListDetailed listItem;
 
-        public ItemDetailPage()
+        public ListDetailedPage()
         {
             InitializeComponent();
             BindingContext = _viewModel = new ListDetailedViewModel();
@@ -55,7 +55,7 @@ namespace BCGL.Views
             
             switch (e.Direction)
             {
-                case SwipeDirection.Left:
+                case SwipeDirection.Right:
                     // Handle the swipe
                     UserListDetailed item = (UserListDetailed)e.Parameter;
                     bool answer = await DisplayAlert("Confirm:","Are your sure you want to delete this item: "+ item.listContent, "Yes","No");
@@ -102,7 +102,7 @@ namespace BCGL.Views
         {
             var selectedItemLocal = (UserListDetailed)((StackLayout)sender).BindingContext;
             App.Database.selectedItem = selectedItemLocal; // Update the global varible
-            await Shell.Current.GoToAsync($"{nameof(ScannerPage)}");
+            await Shell.Current.GoToAsync($"{nameof(ProductDetailPage)}");
         }
     }
 }

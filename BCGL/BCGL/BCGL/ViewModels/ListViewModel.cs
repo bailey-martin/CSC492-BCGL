@@ -96,7 +96,7 @@ namespace BCGL.ViewModels
 
         private async void OnAddItem(object obj)
         {
-            await Shell.Current.GoToAsync(nameof(NewItemPage)); //move UI to New Item Page
+            await Shell.Current.GoToAsync(nameof(AddNewListPage)); //move UI to New Item Page
         }
 
 
@@ -106,7 +106,7 @@ namespace BCGL.ViewModels
                 return;
 
             // This will push the ItemDetailPage onto the navigation stack
-            await Shell.Current.GoToAsync($"{nameof(ItemDetailPage)}?{nameof(ListDetailedViewModel.ItemId)}={item.Id}"); //display the Detailed View page for an item
+            await Shell.Current.GoToAsync($"{nameof(ListDetailedPage)}?{nameof(ListDetailedViewModel.ItemId)}={item.Id}"); //display the Detailed View page for an item
         }
 
         async void OnSwipedLeft(Item item)

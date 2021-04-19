@@ -41,7 +41,7 @@
     <TabBar>
         <ShellContent Title="My Lists" Icon="icon_feed.png" Route="LoginPage" ContentTemplate="{DataTemplate local:LoginPage}" />
         <ShellContent Title="About" Icon="icon_about.png" Route="AboutPage" ContentTemplate="{DataTemplate local:AboutPage}" />
-        <ShellContent Title="Add Items" Icon="icon_add.png" Route="addItemsToDBPage" ContentTemplate="{DataTemplate local:addItemsToDBPage}" />
+        <ShellContent Title="Add Items" Icon="icon_add.png" Route="AddItemsToDBPage" ContentTemplate="{DataTemplate local:AddItemsToDBPage}" />
         <ShellContent Title="Search" Icon="icon_search.png" Route="ItemSearchPage" ContentTemplate="{DataTemplate local:ItemSearchPage}" />
     </TabBar>
 

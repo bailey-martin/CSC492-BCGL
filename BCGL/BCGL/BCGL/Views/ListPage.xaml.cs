@@ -3,11 +3,11 @@ using Xamarin.Forms;
 
 namespace BCGL.Views
 {
-    public partial class ItemsPage : ContentPage
+    public partial class ListPage : ContentPage
     {
         ListViewModel _viewModel;
 
-        public ItemsPage()
+        public ListPage()
         {
             InitializeComponent();
 

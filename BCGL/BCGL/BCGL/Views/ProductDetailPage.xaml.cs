@@ -5,9 +5,9 @@ using Xamarin.Forms.Xaml;
 namespace BCGL.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class ScannerPage : ContentPage
+    public partial class ProductDetailPage : ContentPage
     {
-        public ScannerPage()
+        public ProductDetailPage()
         {
             InitializeComponent();
             this.BindingContext = new ProductDetailViewModel();

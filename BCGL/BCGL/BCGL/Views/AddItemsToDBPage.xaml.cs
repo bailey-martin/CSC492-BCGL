@@ -4,11 +4,11 @@ using Xamarin.Forms;
 
 namespace BCGL.Views
 {
-    public partial class addItemsToDBPage : ContentPage
+    public partial class AddItemsToDBPage : ContentPage
     {
 
         AddItemsToDBViewModel _viewModel;
-        public addItemsToDBPage()
+        public AddItemsToDBPage()
         {
             InitializeComponent();
             BindingContext = _viewModel = new AddItemsToDBViewModel();

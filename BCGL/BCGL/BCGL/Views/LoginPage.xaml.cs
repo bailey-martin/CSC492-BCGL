@@ -39,7 +39,7 @@ namespace BCGL.Views
                     });
                     _viewModel.Username = username;
                     App.Database.username = username; // update global variable
-                    await Shell.Current.GoToAsync($"{nameof(ItemsPage)}");
+                    await Shell.Current.GoToAsync($"{nameof(ListPage)}");
                 }
                 else 
                 {

@@ -31,7 +31,7 @@ namespace BCGL.ViewModels
         private async void OnLoginClicked(object obj)
         {
             // Prefixing with `//` switches to a different navigation stack instead of pushing to the active one
-            await Shell.Current.GoToAsync($"{nameof(ItemsPage)}"); //move to the Items page (the shopping list page) after signing in
+            await Shell.Current.GoToAsync($"{nameof(ListPage)}"); //move to the Items page (the shopping list page) after signing in
         }
     }
 }

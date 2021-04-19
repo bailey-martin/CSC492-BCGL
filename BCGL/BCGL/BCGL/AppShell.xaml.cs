@@ -16,12 +16,12 @@ namespace BCGL
         public AppShell()    //defines navigation routes that are used to move been various UI pages throughout the application
         {
             InitializeComponent();
-            Routing.RegisterRoute(nameof(ItemDetailPage), typeof(ItemDetailPage));
-            Routing.RegisterRoute(nameof(NewItemPage), typeof(NewItemPage));
-            Routing.RegisterRoute(nameof(ItemsPage), typeof(ItemsPage));
-            Routing.RegisterRoute(nameof(addItemsToDBPage), typeof(addItemsToDBPage));
+            Routing.RegisterRoute(nameof(ListDetailedPage), typeof(ListDetailedPage));
+            Routing.RegisterRoute(nameof(AddNewListPage), typeof(AddNewListPage));
+            Routing.RegisterRoute(nameof(ListPage), typeof(ListPage));
+            Routing.RegisterRoute(nameof(AddItemsToDBPage), typeof(AddItemsToDBPage));
             Routing.RegisterRoute(nameof(BarcodeScannerPage), typeof(BarcodeScannerPage));
-            Routing.RegisterRoute(nameof(ScannerPage), typeof(ScannerPage));
+            Routing.RegisterRoute(nameof(ProductDetailPage), typeof(ProductDetailPage));
         }
 
     }
