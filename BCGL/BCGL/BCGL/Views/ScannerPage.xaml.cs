@@ -24,7 +24,7 @@ namespace BCGL.Views
             base.OnAppearing();
             if (App.Database.selectedItem != null)
             {
-                collectionView.ItemsSource = await App.Database.GetBarcodesAsync(App.Database.selectedItem.listContent);
+                collectionView.ItemsSource = await App.Database.GetBarcodesAsync(App.Database.selectedItem.listContent); // add items retrieved from DB to collectionView element
             }
             else
             {
