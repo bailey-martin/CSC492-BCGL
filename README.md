@@ -1,2 +1,2 @@
-# CSC492-BCGL
-University of Mount Union CSC 492 Senior Project created by RAID Inc.
+# CSC 492 Team Website and Blog
+This "blog" branch of our GitHub repository contains all of the code used in the development of our team website. We are hosting the site using GitHub Pages. Here is a link to the production version of the RAID Inc. website: [RAID Inc. Team Website](https://bailey-martin.github.io/CSC492-BCGL/)
