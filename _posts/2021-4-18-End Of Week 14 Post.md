@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Week 14 Recap (4-5-21 to 4-11-21)
+title: Week 14 Recap (4-12-21 to 4-18-21)
 ---
 
 This past Monday, RAID Inc. held a formal group meeting in person. The primary focus was on finishing up the user's manual, which the rough draft was due on Wednesday this week. They also took an inventory of what else we need to do moving forward.
