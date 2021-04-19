@@ -12,15 +12,15 @@ using SQLiteNetExtensions.Attributes;
 
 namespace BCGL
 {
-    [Table("UserData")]  //UserData table stored in the SQLite database
+    [Table("UserData")]  // Create idenitfier for table for when used in code
     public class UserData
     {
-        [PrimaryKey, Unique, MaxLength(20)]
+        [PrimaryKey, Unique, MaxLength(20)] // Make varible directly below have a max length of 20 chars, unique, and a primary key
         public string username { get; set; }
-        [MaxLength(12)]
+        [MaxLength(12)] // Make varible directly below have a max length of 12 chars
         public string password { get; set; }
 
-        [OneToMany(CascadeOperations = CascadeOperation.All)] //WHAT DOES THIS DO????
-        public UserList[] UserLists { get; set; } //WHAT DOES THIS DO????
+        [OneToMany(CascadeOperations = CascadeOperation.All)] // create foreign key realtions - when a record is removed, remove all other records using this refernece
+        public UserList[] UserLists { get; set; } // create connection to UserList table
     }
 }

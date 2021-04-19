@@ -10,12 +10,12 @@ using SQLite;
 
 namespace BCGL
 {
-    [Table("Barcode")] //storing the information in the Barcode table of our SQLite database
+    [Table("Barcode")] // Create idenitfier for table for when used in code
     public class Barcode
     {
-        [Unique, PrimaryKey]
+        [Unique, PrimaryKey] // Make varible directly below unique and a primary key
         public string SKU { get; set; }
-        public string ProductName { get; set; }
+        public string ProductName { get; set; } 
         public double Price { get; set; }
     }
 }

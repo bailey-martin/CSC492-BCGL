@@ -12,20 +12,22 @@ using SQLiteNetExtensions.Attributes;
 
 namespace BCGL
 {
-    [Table("UserList")] //UserList table in the SQLite database
+    [Table("UserList")] // Create idenitfier for table for when used in code
     public class UserList
     {
-        [PrimaryKey]
+        [PrimaryKey] // set variable below a primary key
         public string listID { get; set; }
-        [ForeignKey(typeof(UserData))]
+        [ForeignKey(typeof(UserData))] // set foreign key relation to variable below
         public string username { get; set; }
         public string text { get; set; }
         public string description { get; set; }
 
-        [OneToMany(CascadeOperations = CascadeOperation.All)] //WHAT DOES THIS DO?????
-        public UserListDetailed[] UserListDetailed { get; set; } //WHAT DOES THIS DO???
+        [OneToMany(CascadeOperations = CascadeOperation.All)] // create foreign key realtions - when a record is removed, remove all other records using this refernece
+                                                              // Set how many records belong to each other
+        public UserListDetailed[] UserListDetailed { get; set; } // create connection to UserList table
 
-        [ManyToOne(CascadeOperations = CascadeOperation.CascadeRead)] //WHAT DOES THIS DO????
-        public UserData UserData { get; set; } //WHAT DOES THIS DO????
+        [ManyToOne(CascadeOperations = CascadeOperation.CascadeRead)] // create foreign key realtions - when a record is removed, remove all other records using this refernece
+                                                                      // Set how many records belong to each other
+        public UserData UserData { get; set; } // finish connection to UserData table
     }
 }

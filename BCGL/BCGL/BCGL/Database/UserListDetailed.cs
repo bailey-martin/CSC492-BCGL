@@ -12,16 +12,17 @@ using SQLiteNetExtensions.Attributes;
 
 namespace BCGL
 {
-    [Table("UserListDetailed")] //UserListDetailed table located in the SQLite database
+    [Table("UserListDetailed")] // Create idenitfier for table for when used in code
     public class UserListDetailed
     {
-        [ForeignKey(typeof(UserList))]
-        public string listID { get; set; }  //unique identifier for each shopping list
-        public string listContent { get; set; } //WHAT IS THIS??
-        [PrimaryKey]
-        public string record { get; set; } //WHAT IS THIS??
+        [ForeignKey(typeof(UserList))] // set foreign key relation to variable below
+        public string listID { get; set; }  // store the list id to know what list this item belongs to
+        public string listContent { get; set; } // store the list item found from the database table
+        [PrimaryKey] // set variable below a primary key
+        public string record { get; set; } // store a unique identifer
 
-        [ManyToOne(CascadeOperations = CascadeOperation.CascadeRead)] //WHAT IS THIS???
-        public UserList UserList { get; set; } //WHAT IS THIS???
+        [ManyToOne(CascadeOperations = CascadeOperation.CascadeRead)] // create foreign key realtions - when a record is removed, remove all other records using this refernece
+                                                                      // Set how many records belong to each other
+        public UserList UserList { get; set; } // finish connection to UserList table
     }
 }
