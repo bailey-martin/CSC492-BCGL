@@ -15,7 +15,7 @@ namespace BCGL.Views
 
         protected override void OnDisappearing()
         {
-            App.Database.selectedItem = null;
+            App.Database.selectedItem = null; // clear the global variable
             base.OnDisappearing();
         }
 
@@ -24,7 +24,7 @@ namespace BCGL.Views
             base.OnAppearing();
             if (App.Database.selectedItem != null)
             {
-                collectionView.ItemsSource = await App.Database.GetBarcodesAsync(App.Database.selectedItem.listContent);
+                collectionView.ItemsSource = await App.Database.GetBarcodesAsync(App.Database.selectedItem.listContent); // add items retrieved from DB to collectionView element
             }
             else
             {

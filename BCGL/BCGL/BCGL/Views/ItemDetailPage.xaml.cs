@@ -8,6 +8,7 @@ namespace BCGL.Views
     {
         ItemDetailViewModel _viewModel;
         UserListDetailed listItem;
+
         public ItemDetailPage()
         {
             InitializeComponent();
@@ -17,7 +18,7 @@ namespace BCGL.Views
         protected override async void OnAppearing()
         {
             base.OnAppearing();
-            collectionView.ItemsSource = await App.Database.GetListDetailedAsync(_viewModel.ItemId);
+            collectionView.ItemsSource = await App.Database.GetListDetailedAsync(_viewModel.ItemId); // add items retrieved from DB to collectionView element
             if (App.Database.scannerResult != null)
             {
                 string barcode = App.Database.scannerResult;
@@ -100,7 +101,7 @@ namespace BCGL.Views
         async void TapGestureRecognizer_Tapped_1(object sender, EventArgs e)
         {
             var selectedItemLocal = (UserListDetailed)((StackLayout)sender).BindingContext;
-            App.Database.selectedItem = selectedItemLocal;
+            App.Database.selectedItem = selectedItemLocal; // Update the global varible
             await Shell.Current.GoToAsync($"{nameof(ScannerPage)}");
         }
     }
