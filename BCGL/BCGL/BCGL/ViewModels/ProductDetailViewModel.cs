@@ -3,7 +3,7 @@
   University of Mount Union CSC 492
   Spring 2021 Semester
   Contact Information: raidincsoftware@gmail.com
-  Class Description: Used for the ???????????????? <<<<<<CHANGE>>>>>>> page.
+  Class Description: Used for the viewing additional product details, including SKU, product name, and price.
 */
 
 namespace BCGL.ViewModels
