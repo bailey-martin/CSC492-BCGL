@@ -16,18 +16,18 @@ namespace BCGL.Views
         {
             base.OnAppearing();
 
-            collectionView.ItemsSource = await App.Database.GetBarcodesAllAsync();
+            collectionView.ItemsSource = await App.Database.GetBarcodesAllAsync(); // add items retrieved from DB to collectionView element
         }
 
         public async void searchFunction(string searchTarget)
         {
             if (string.IsNullOrWhiteSpace(searchTarget))
             {
-                collectionView.ItemsSource = await App.Database.GetBarcodesAllAsync();
+                collectionView.ItemsSource = await App.Database.GetBarcodesAllAsync(); // update items retrieved from DB to collectionView element
             }
             else
             {
-                collectionView.ItemsSource = await App.Database.GetBarcodesAsync(searchTarget);
+                collectionView.ItemsSource = await App.Database.GetBarcodesAsync(searchTarget); // update items retrieved from DB to collectionView element
             }
         }
 

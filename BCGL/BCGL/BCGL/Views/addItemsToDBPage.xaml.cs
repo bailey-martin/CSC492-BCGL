@@ -17,11 +17,12 @@ namespace BCGL.Views
         protected override async void OnAppearing()
         {
             base.OnAppearing();
-            collectionView.ItemsSource = await App.Database.GetInfoAsync();
+            collectionView.ItemsSource = await App.Database.GetInfoAsync(); // add items retrieved from DB to collectionView element
         }
 
         async void OnButtonClicked(object sender, EventArgs e)
         {
+            // Check if inputs are filled
             if (!string.IsNullOrWhiteSpace(productNameEntry.Text) && !string.IsNullOrWhiteSpace(skuEntry.Text) && !string.IsNullOrEmpty(priceEntry.Text))
             {
                 productNameEntry.Text = string.Empty;

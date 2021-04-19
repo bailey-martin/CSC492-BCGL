@@ -25,6 +25,7 @@ namespace BCGL.Views
         async void LoginClicked(object sender, EventArgs e)
         {
             String Token = "";
+            // catch general errors so app doesnt crash
             try
             {
                 Token = await auth.LoginWithEmailPassword(UsernameInput.Text, PasswordInput.Text);
@@ -37,7 +38,7 @@ namespace BCGL.Views
                         password = PasswordInput.Text
                     });
                     _viewModel.Username = username;
-                    App.Database.username = username;
+                    App.Database.username = username; // update global variable
                     await Shell.Current.GoToAsync($"{nameof(ItemsPage)}");
                 }
                 else 

@@ -15,7 +15,7 @@ namespace BCGL.Views
 
         protected override void OnDisappearing()
         {
-            App.Database.selectedItem = null;
+            App.Database.selectedItem = null; // clear the global variable
             base.OnDisappearing();
         }
 

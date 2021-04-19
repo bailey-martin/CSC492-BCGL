@@ -17,7 +17,7 @@ namespace BCGL.Views
                 scanResultText.Text = result.Text + " (type: " + result.BarcodeFormat.ToString() + ")";
                 App.Database.scannerResult = result.Text;
                 scannerView.IsScanning = false;
-                Shell.Current.GoToAsync("..");
+                Shell.Current.GoToAsync(".."); // Navigate to previous page
             });
         }
 
