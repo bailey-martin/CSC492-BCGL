@@ -14,7 +14,7 @@ namespace BCGL.ViewModels
 {
     public class NewItemViewModel : BaseViewModel
     {
-        private string text;
+        private string text;  //data associated with Items/Products
         private string description;
         private string id;
 
@@ -30,7 +30,7 @@ namespace BCGL.ViewModels
         private bool ValidateSave()
         {
             return !String.IsNullOrWhiteSpace(text)
-                && !String.IsNullOrWhiteSpace(description); //checks to make sure the new item is valid
+                && !String.IsNullOrWhiteSpace(description); //checks to make sure the new item is valid (not null or only consisting of a single space character)
         }
 
         public string Text
@@ -51,7 +51,7 @@ namespace BCGL.ViewModels
             set => SetProperty(ref description, value);
         }
 
-        public Command SaveCommand { get; }
+        public Command SaveCommand { get; }  //communication link for save and cancel buttons on the NewItemView class
         public Command CancelCommand { get; }
 
         private async void OnCancel()

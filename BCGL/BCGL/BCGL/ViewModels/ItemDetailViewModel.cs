@@ -62,7 +62,7 @@ namespace BCGL.ViewModels
             }
             catch (Exception)
             {
-                Debug.WriteLine("Failed to Load Item");
+                Debug.WriteLine("Failed to Load Item"); //displayed if the load item function fails
             }
         }
     }

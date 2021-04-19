@@ -21,7 +21,7 @@ namespace BCGL.ViewModels
     {
         private Item _selectedItem;
 
-        public ObservableCollection<Item> Items { get; }
+        public ObservableCollection<Item> Items { get; } //references XAML view and is the link between a view and viewWModel
         public Command LoadItemsCommand { get; }
         public Command AddItemCommand { get; }
         public Command<Item> ItemTapped { get; }
@@ -45,25 +45,25 @@ namespace BCGL.ViewModels
 
         async Task ExecuteLoadItemsCommand()
         {
-            IsBusy = true;
+            IsBusy = true; //indicates the operation is in progress
 
             try
             {
                 Items.Clear();
-                var username = App.Database.username;
+                var username = App.Database.username; //user who is requesting a shopping list to be displayed
 
                 var itemIDs = await App.Database.GetListAsync(username);
                 foreach (var id in itemIDs)
                 {
                     
-                    Item newItem = new Item()
+                    Item newItem = new Item() //creates a new Item object for every item on the shopping list
                     {
                         Id = id.listID,
                         Text = id.text,
                         Description = id.description
                     };
 
-                    Items.Add(newItem);
+                    Items.Add(newItem); //ass a new Item to the Items arrayList
                 }
             }
             catch (Exception ex)
@@ -72,13 +72,13 @@ namespace BCGL.ViewModels
             }
             finally
             {
-                IsBusy = false;
+                IsBusy = false; //indicates that the operation has completed
             }
         }
 
         public void OnAppearing()
         {
-            IsBusy = true;
+            IsBusy = true; //begins the operation when page is loaded/requested by user
             SelectedItem = null;
         }
 

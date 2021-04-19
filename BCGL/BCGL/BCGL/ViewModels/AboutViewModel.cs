@@ -21,6 +21,6 @@ namespace BCGL.ViewModels
             OpenWebCommand = new Command(async () => await Launcher.OpenAsync("https://bailey-martin.github.io/CSC492-BCGL/about/#contact-us"));
         }
 
-        public ICommand OpenWebCommand { get; }
+        public ICommand OpenWebCommand { get; } //in-app web browser functionality
     }
 }

@@ -14,7 +14,7 @@ namespace BCGL.ViewModels
     public class addItemsToDBModel : BaseViewModel
     {
         private string sku;
-        private string productName;
+        private string productName;  //product information
         private double price;
 
         public addItemsToDBModel()
@@ -24,12 +24,12 @@ namespace BCGL.ViewModels
             AddCommand = new Command(OnAdd, ValidateSave);
             this.PropertyChanged +=
                 (_, __) => AddCommand.ChangeCanExecute();
-            Title = "Add Products to System";
+            Title = "Add Products to System"; //GUI element
         }
 
         private bool ValidateSave()
         {
-            return !String.IsNullOrWhiteSpace(sku)
+            return !String.IsNullOrWhiteSpace(sku) //checks the following values to ensure that they are not null and that each entity consists of more than a single space character
                 && !String.IsNullOrWhiteSpace(productName)
                 && !String.IsNullOrWhiteSpace(price.ToString())
                 && !String.IsNullOrEmpty(price.ToString())
@@ -55,7 +55,7 @@ namespace BCGL.ViewModels
             set => SetProperty(ref price, value);
         }
 
-        public Command AddCommand { get; }
+        public Command AddCommand { get; } //addition of products/items
 
         private async void OnAdd()
         {
