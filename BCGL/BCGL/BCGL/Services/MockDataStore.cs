@@ -1,4 +1,13 @@
-﻿using BCGL.Models;
+﻿/*MockDataStore.cs
+  Property of RAID Inc. (Andrew Moore, Bailey Martin, Kyle Hieb)
+  University of Mount Union CSC 492
+  Spring 2021 Semester
+  Contact Information: raidincsoftware@gmail.com
+  Class Description: The MockDataStore class implements the IDataStore interface of an Item. The constructor initializes 6 new items with default text and description values. This class contains the
+      functionality for the methods described in the IDataStore.cs class.
+*/
+
+using BCGL.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;

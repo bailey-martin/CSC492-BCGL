@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<!--ListDetailedPage.xaml
+  Property of RAID Inc. (Andrew Moore, Bailey Martin, Kyle Hieb)
+  University of Mount Union CSC 492
+  Spring 2021 Semester
+  Contact Information: raidincsoftware@gmail.com
+  Class Description: The ListDetailedPage class contains the UI elements, layout, and overall design for the BCGL app's "Additional Product/Item Detail" page.
+-->
+
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BCGL.Views.ListDetailedPage"   
+             Title="{Binding Title}">
+
+    <StackLayout Spacing="20" Padding="15">
+        <SearchBar x:Name="searchTextField" TextChanged="OnTextChanged" Placeholder="Enter product SKU here"></SearchBar>
+        <ScrollView>
+                <CollectionView x:Name="searchResults" HeightRequest="100">
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+                            <StackLayout>
+                                <Label Text="{Binding ProductName}"
+                                       FontSize="Medium" />
+                                <StackLayout.GestureRecognizers>
+                                    <TapGestureRecognizer 
+                                        NumberOfTapsRequired="1"
+                                        Tapped="TapGestureRecognizer_Tapped"
+                                        CommandParameter="{Binding .}">
+                                    </TapGestureRecognizer>
+                                </StackLayout.GestureRecognizers>
+                            </StackLayout>
+                        </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+            </ScrollView>
+        <Button Text="Add to List"
+                Clicked="OnButtonClicked" />
+        <Button Text="Add to list by camera"
+                Clicked="OnButtonTwoClicked" />
+        <CollectionView x:Name="collectionView">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <StackLayout>
+                        <Label Text="{Binding listContent}"
+                               FontSize="Medium"
+                               x:Name="listItem"/>
+                        <StackLayout.GestureRecognizers>
+                                    <TapGestureRecognizer 
+                                        NumberOfTapsRequired="1"
+                                        Tapped="TapGestureRecognizer_Tapped_1"
+                                        CommandParameter="{Binding listContent}">
+                                    </TapGestureRecognizer>
+                            <SwipeGestureRecognizer Direction="Right"  Swiped="OnSwiped" CommandParameter="{Binding .}"/>
+                        </StackLayout.GestureRecognizers>
+                    </StackLayout>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+    </StackLayout>
+    
+</ContentPage>

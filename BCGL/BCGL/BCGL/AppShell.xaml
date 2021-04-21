@@ -5,6 +5,14 @@
        Title="BCGL"
        x:Class="BCGL.AppShell">
 
+ <!--AppShell.xaml
+  Property of RAID Inc. (Andrew Moore, Bailey Martin, Kyle Hieb)
+  University of Mount Union CSC 492
+  Spring 2021 Semester
+  Contact Information: raidincsoftware@gmail.com
+  Class Description: The AppShell class contains the UI elements, layout, and overall design for the entire BCGL app.
+-->
+    
     <!--
         The overall app visual hierarchy is defined here, along with navigation.
     
@@ -29,19 +37,23 @@
         </ResourceDictionary>
     </Shell.Resources>
 
+    <!-- Bottom Navigation Tab Bar layout and buttons-->
     <TabBar>
+        <ShellContent Title="My Lists" Icon="icon_feed.png" Route="LoginPage" ContentTemplate="{DataTemplate local:LoginPage}" />
         <ShellContent Title="About" Icon="icon_about.png" Route="AboutPage" ContentTemplate="{DataTemplate local:AboutPage}" />
-        <ShellContent Title="Browse" Icon="icon_feed.png" ContentTemplate="{DataTemplate local:ItemsPage}" />
-        <ShellContent Title="Scanner" Icon="icon_feed.png" ContentTemplate="{DataTemplate local:ItemDetailPage}" />
+        <ShellContent Title="Add Items" Icon="icon_add.png" Route="AddItemsToDBPage" ContentTemplate="{DataTemplate local:AddItemsToDBPage}" />
+        <ShellContent Title="Search" Icon="icon_search.png" Route="ItemSearchPage" ContentTemplate="{DataTemplate local:ItemSearchPage}" />
     </TabBar>
 
     <!--
         If you would like to navigate to this content you can do so by calling
         await Shell.Current.GoToAsync("//LoginPage");
-    -->
+   -->
+    <!-- For reference, not in project anymore
     <TabBar>
-        <ShellContent Route="LoginPage" ContentTemplate="{DataTemplate local:LoginPage}" />
+        <ShellContent Route="LoginPage" Icon="icon_about.png" ContentTemplate="{DataTemplate local:LoginPage}" />
     </TabBar>
+    -->
 
 
 </Shell>

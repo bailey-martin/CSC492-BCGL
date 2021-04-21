@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "706741706858",
+    "project_id": "bcgl-authentication",
+    "storage_bucket": "bcgl-authentication.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:706741706858:android:450108ca52799d31c36a13",
+        "android_client_info": {
+          "package_name": "com.raidincsoftware.bcgl"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "706741706858-qce02oeo5m05rjcu3fchbs1dmkc7a5le.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBUJTu-Byg0h25EB6N51R01FurgHqTnFvI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "706741706858-qce02oeo5m05rjcu3fchbs1dmkc7a5le.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

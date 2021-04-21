@@ -1,4 +1,11 @@
-﻿using System;
+﻿/*AboutViewModel.cs
+  Property of RAID Inc. (Andrew Moore, Bailey Martin, Kyle Hieb)
+  University of Mount Union CSC 492
+  Spring 2021 Semester
+  Contact Information: raidincsoftware@gmail.com
+  Class Description: The AboutViewModel provides the in-app web browser functionality for the 2 buttons on the "About" page of the BCGL app.
+*/
+
 using System.Windows.Input;
 using Xamarin.Essentials;
 using Xamarin.Forms;
@@ -10,9 +17,10 @@ namespace BCGL.ViewModels
         public AboutViewModel()
         {
             Title = "About";
-            OpenWebCommand = new Command(async () => await Browser.OpenAsync("https://aka.ms/xamarin-quickstart"));
+            OpenWebCommand = new Command(async () => await Browser.OpenAsync("https://bailey-martin.github.io/CSC492-BCGL/"));
+            OpenWebCommand = new Command(async () => await Launcher.OpenAsync("https://bailey-martin.github.io/CSC492-BCGL/about/#contact-us"));
         }
 
-        public ICommand OpenWebCommand { get; }
+        public ICommand OpenWebCommand { get; } //in-app web browser functionality
     }
 }

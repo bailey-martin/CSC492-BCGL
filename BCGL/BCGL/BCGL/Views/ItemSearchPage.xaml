@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<!--ItemSearchPage.xaml
+  Property of RAID Inc. (Andrew Moore, Bailey Martin, Kyle Hieb)
+  University of Mount Union CSC 492
+  Spring 2021 Semester
+  Contact Information: raidincsoftware@gmail.com
+  Class Description: The ItemSearchPage class contains the UI elements, layout, and overall design for the BCGL app's "manual item search" page.
+-->
+
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BCGL.Views.ItemSearchPage"
+             Title="Product Search">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Search for an item manually by entering the product's SKU number or the product's name:"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+            <SearchBar x:Name="searchTextField" TextChanged="OnTextChanged" Placeholder="Enter product SKU or product name here"></SearchBar>
+            <CollectionView x:Name="collectionView">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <StackLayout>
+                        <Label Text="{Binding ProductName}"
+                               FontSize="Medium" />
+                    </StackLayout>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
