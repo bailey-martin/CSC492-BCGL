@@ -60,7 +60,7 @@
                         BackgroundColor="{StaticResource Primary}"
                         TextColor="White" />
                 <Button Margin="0,10,0,0" Text="Contact Us!"
-                        Command="{Binding OpenWebCommand}"
+                        Command="{Binding OpenWebContactCommand}"
                         BackgroundColor="{StaticResource Primary}"
                         TextColor="White" />
             </StackLayout>
