@@ -162,6 +162,9 @@ namespace BCGL
             _database.InsertOrReplaceAsync(new Barcode { SKU = "681131078405", ProductName = "Equate Extra Strength Acetaminophen Caplets, 500mg, 200 Ct", Price = 3.22 });
             _database.InsertOrReplaceAsync(new Barcode { SKU = "300450581181", ProductName = "Sudafed PE Maximum Strength Non Drowsy Sinus Decongestant, 18 Ct", Price = 6.48 });
             _database.InsertOrReplaceAsync(new Barcode { SKU = "731124443007", ProductName = "Perform Pain Relieving Roll-on, 3 fl oz", Price = 6.95 });
+            _database.InsertOrReplaceAsync(new Barcode { SKU = "019200771825", ProductName = "Lysol Disinfecting Wipes-Lemon/Lime Blosson Scent, 40ct.", Price = 5.99 });
+            _database.InsertOrReplaceAsync(new Barcode { SKU = "030034936846", ProductName = "Giant Eagle Vinyl Powder-Free Medical Gloves", Price = 3.99 });
+            _database.InsertOrReplaceAsync(new Barcode { SKU = "044000063047", ProductName = "Belvita Sandwich Crackers-Cinnamon Sugar", Price = 2.58 });
             return _database.InsertOrReplaceAsync(new Barcode { SKU = "78742351931", ProductName = "Great Value Spring Water, 1 Gallon", Price = 0.88 });
         }
     }
