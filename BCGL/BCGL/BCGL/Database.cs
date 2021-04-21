@@ -19,10 +19,14 @@ namespace BCGL
         private string username1;
         private string result;
         private UserListDetailed _selectedItem;
+        private Barcode _selectedBarcodeItem;
+        private string _fromPage;
 
         public string username { get => username1; set => username1 = value; }
         public string scannerResult { get => result; set => result = value; }
         public UserListDetailed selectedItem { get => _selectedItem; set => _selectedItem = value; }
+        public Barcode selectedBarcodeItem { get => _selectedBarcodeItem; set => _selectedBarcodeItem = value; }
+        public string fromPage { get => _fromPage; set => _fromPage = value; }
 
         public Database(string dbPath)
         {

@@ -20,8 +20,10 @@
                     <CollectionView.ItemTemplate>
                         <DataTemplate>
                             <StackLayout>
-                                <Label Text="{Binding ProductName}"
-                                       FontSize="Medium" />
+                                <Frame Padding="5" HasShadow="False" BorderColor="Black">
+                                    <Label Text="{Binding ProductName}"
+                                           FontSize="Medium" />
+                                </Frame>
                                 <StackLayout.GestureRecognizers>
                                     <TapGestureRecognizer 
                                         NumberOfTapsRequired="1"
@@ -42,9 +44,11 @@
             <CollectionView.ItemTemplate>
                 <DataTemplate>
                     <StackLayout>
-                        <Label Text="{Binding listContent}"
-                               FontSize="Medium"
-                               x:Name="listItem"/>
+                        <Frame Padding="5" HasShadow="False" BorderColor="Black">
+                            <Label Text="{Binding listContent}"
+                                   FontSize="Medium"
+                                   x:Name="listItem"/>
+                        </Frame>
                         <StackLayout.GestureRecognizers>
                                     <TapGestureRecognizer 
                                         NumberOfTapsRequired="1"

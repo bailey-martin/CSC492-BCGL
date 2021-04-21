@@ -11,7 +11,7 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="BCGL.Views.ItemSearchPage"
-             Title="Product Search">
+             Title="{Binding Title}">
     <ContentPage.Content>
         <StackLayout>
             <Label Text="Search for an item manually by entering the product's SKU number or the product's name:"
@@ -22,8 +22,17 @@
             <CollectionView.ItemTemplate>
                 <DataTemplate>
                     <StackLayout>
-                        <Label Text="{Binding ProductName}"
-                               FontSize="Medium" />
+                        <Frame Padding="5" HasShadow="False" BorderColor="Black">
+                            <Label Text="{Binding ProductName}"
+                                   FontSize="Medium" />
+                        </Frame>
+                        <StackLayout.GestureRecognizers>
+                         <!--mapping for a right swipe gesture-->
+                            <TapGestureRecognizer
+                                NumberOfTapsRequired="1"
+                                Tapped="TapGestureRecognizer_Tapped_1"
+                                CommandParameter="{Binding listContent}" />
+                        </StackLayout.GestureRecognizers>
                     </StackLayout>
                 </DataTemplate>
             </CollectionView.ItemTemplate>

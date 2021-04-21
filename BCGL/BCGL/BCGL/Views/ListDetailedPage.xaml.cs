@@ -102,6 +102,7 @@ namespace BCGL.Views
         {
             var selectedItemLocal = (UserListDetailed)((StackLayout)sender).BindingContext;
             App.Database.selectedItem = selectedItemLocal; // Update the global varible
+            App.Database.fromPage = "ListDetailedPage";
             await Shell.Current.GoToAsync($"{nameof(ProductDetailPage)}");
         }
     }
