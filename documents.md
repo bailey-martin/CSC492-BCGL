@@ -16,4 +16,4 @@ permalink: /documents/
 
 [Press Release 2](Documents/PressRelease2.pdf)
 
-[User Manual](Documents/BCGLUserManual Final PDF.pdf)
+[User Manual](Documents/BCGLUserManualFinalPDF.pdf)
